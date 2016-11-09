@@ -1,0 +1,366 @@
+\documentclass{report}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[francais]{babel}
+\usepackage{titlesec}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{enumitem}
+%\usepackage[document]{ragged2e}
+\begin{document}
+
+\titleformat{\chapter}[display]
+  {\normalfont\huge\bfseries\centering}
+  {\chaptertitlename\ \thechapter}{10pt}{\Huge}
+
+  \titleformat{\section}[block]
+  {\normalfont\large\bfseries\centering}
+  {\thesection}{3pt}{\large}
+
+%\titleformat{\subsection}[runin]{\normalfont\large\bfseries\raggedleft}{\thesubsection}{0pt}{}
+
+
+\renewcommand{\thesection}{\arabic{section}.}
+\renewcommand{\thesubsection}{Exercice \arabic{section}.\arabic{subsection}}
+
+
+\section{Préliminaires}
+
+\newpage
+
+\section{Familles d'ensembles}
+
+\subsection{} \fbox{
+\parbox{0.9\textwidth}{
+Trouver un exemple d'ensemble $X$ et de classe monotone $\mathcal{M}$ sur $X$ tels que $\emptyset \in \mathcal{M}$, $X \in \mathcal{M}$ mais $\mathcal{M}$ n'est pas une tribu.}}\\
+
+Solution: $X=\{0,1\}$, $\mathcal M = \{\emptyset, \{0\}, \{0,1\}\}$
+
+\subsection{}  \fbox{
+\parbox{0.9\textwidth}{Trouver un exemple d'ensemble $X$ et deux tribus $\mathcal A_1, \mathcal A_2$ sur $X$ tels que $\mathcal A_1\cup \mathcal A_2$ n'est pas une tribu. }}\\
+
+Solution: $X=\{0,1,2\}$, $\mathcal A_1=\{\emptyset, \{0\}, \{1,2\}, X\}$, $\mathcal A_2=\{\emptyset, \{1\}, \{0,2\}, X\}$
+
+\subsection{}  \fbox{
+\parbox{0.9\textwidth}{Soit $\mathcal A_1\subset \mathcal A_2\subset \ldots$ des tribus sur $X$. $\cup_i A_i$ est-elle une tribu ?}}\\
+
+Solution: Non. $X=\mathbb N$, $\mathcal A_n=\sigma(\{\{0\}, \ldots, \{n\}\})$. Par l'absurde, comme $\forall n, \{2n\}\in \cup_i \mathcal A_i$, on a $2\mathbb N \in \cup_i \mathcal A_i$, donc $2\mathbb N \in \mathcal A_{k}$ pour un certain $k$. En considérant $\mathcal B_k$ l'ensemble des parties de $\mathbb N$ de la forme $B$ ou $B\cup \{k+1,k+2,\ldots\}$ avec $B\subset \{0,\ldots k\}$, on construit une tribu qui contient $\{\{0\},\ldots, \{k\}\}$, donc $\mathcal A_k \subset \mathcal B_k$. Contradiction avec $2\mathbb N \in \mathcal A_{k}$.
+
+\subsection{}  \fbox{
+\parbox{0.9\textwidth}{Soit $\mathcal M_1\subset \mathcal M_2\subset \ldots$ des classes monotones sur $X$ et $\mathcal M = \cup_n \mathcal M_n$. \newline Soit $(A_i)_i$ une suite croissante d'éléments de $\mathcal M$. A-t-on $\cup_n A_n \in \mathcal M$ ?}} \\
+
+Solution: Non. $X=\mathbb N$, $\mathcal M_i = \{\{1\}, \{1,2\}, \ldots, \{1,2,\ldots, i\}\}$ et $A_i=\{1,2,\ldots, i\}$
+
+\subsection{}  \fbox{
+\parbox{0.9\textwidth}{ Image réciproque d'une tribu est une tribu}}
+
+\subsection{}  \fbox{
+\parbox{0.9\textwidth}{Soit $\mathcal A$ une tribu sur $X$ telle que si $A\in \mathcal A \setminus \{\emptyset\}$, il existe $B,C\in \mathcal A$ non vides avec $B\cap C = \emptyset$ et $B\cup C  =A$. Montrer que $\mathcal A$ n'est pas dénombrable.}}\\
+
+Solution: On construit une suite $(C_n)$ d'éléments de $\mathcal A$ deux à deux disjoints: par hypothèse, $X = B_1\cup C_1$, $B_1=B_2\cup C_2$, $B_2=B_3\cup C_3$, ... On considère ensuite l'application $\mathcal P( \mathbb N) \to \mathcal A$, $J \mapsto \bigcup_{j\in J} C_j$. Elle est injective et $\mathcal P( \mathbb N) \sim \mathbb R$, donc $\mathcal A$ n'est pas dénombrable.
+
+\subsection{} Sans difficulté
+
+\subsection{}  \fbox{
+\parbox{0.9\textwidth}{($\bigstar$) Montrer qu'une tribu $\mathcal A$ sur $X$ est soit finie, soit non-dénombrable.}}\\
+
+Solution: Sur $X$ on introduit la relation d'équivalence $R$ définie par  $$xRy\iff \left(\forall A\in \mathcal A, x\in A \iff y\in A\right)$$ Soit $x\in X$, on note $\dot x$ la classe d'équivalence de $x$. Montrons que $\displaystyle \dot x = \bigcap_{A\in \mathcal A, x\in A}A$.\newline
+\fbox{$\subset$}  Soit $y\in \dot x$. Soit $A\in \mathcal A$ tel que $x\in A$. Comme $xRy$, $y\in A$, et ok.\newline
+\fbox{$\supset$} Soit $y\in \bigcap_{A\in \mathcal A, x\in A}A$ . Soit $A\in \mathcal A$. Si $x\in A$, comme $\bigcap_{A\in \mathcal A, x\in A}A \subset A$, \newline on a $y\in A$. Si $y\in A$, en supposant par l'absurde que $x\notin A$, on a $x\in A^c$, $A^c \in \mathcal A$ et  $y\notin A^c$, ce qui est absurde. Donc $x\in A$. Conclusion: $x\in A \iff y\in A$, ie $xRy$, d'où $y\in \dot x$.\newline \newline
+Supposons $\mathcal A$ dénombrable.\newline
+Notons $\Gamma$ l'ensemble des classes d'équivalence. Chaque $\gamma \in \Gamma$ est dans $\mathcal A$. En effet, avec $x\in \gamma$, on a $\gamma = \bigcap_{A\in \mathcal A, x\in A} A$ qui est une intersection dénombrable d'éléments de $\mathcal A$.\newline
+On définit
+$$\begin{array}{clcl}
+  \varphi : &\mathcal{P}(\Gamma) &\longrightarrow  &\mathcal A\\
+      &\mathcal C        &\longmapsto      & \bigcup_{\gamma \in \mathcal C} \gamma \\
+\end{array}$$
+
+Montrons que $\varphi$ est bijective: \newline
+- \underline {inj}: Soient $\mathcal C \neq \mathcal C'$ des éléments de $\mathcal P(\Gamma)$. Sans perte de généralité on dispose de $\gamma \in \mathcal C \setminus \mathcal C'$. Considérons $x\in \gamma$. Alors $x\in \varphi(\mathcal C)$. Comme les classes sont disjointes, $\forall \gamma' \in \mathcal C', x\notin \gamma'$ donc $x\notin \varphi(\mathcal C')$. Donc $\varphi(\mathcal C) \neq \varphi(\mathcal C')$ \newline
+- \underline {surj}: On démontre sans mal que, pour $A\in \mathcal A$, $\displaystyle A=\bigcup_{x\in A} \dot x$ \newline
+On distingue deux cas: \newline
+$\bullet$ $\Gamma$ est fini. Alors $\mathcal A\sim \mathcal{P}(\Gamma)$ est fini.\newline
+$\bullet$ $\Gamma$ est au moins infini dénombrable. $\mathcal A$ a au moins le cardinal de $\mathbb R$ donc non dénombrable. \newline
+\underline{Note}: comme dans l'exercice 2.6 on fabrique une famille infinie d'éléments disjoints de la tribu et on fait exploser la tribu avec les unions de ces éléments.
+
+\subsection{} Sans difficulté
+
+\subsection{} \fbox{
+\parbox{0.9\textwidth}{(Kortchemski) Soit $(E,\mathcal A)$ un espace mesurable, $\mathcal C$ une famille de parties de $E$ et $B\in \sigma(\mathcal C)$. Montrer qu'il existe une famille dénombrable $\mathcal D\subset \mathcal C$ telle que $B\in \sigma(\mathcal D)$}}\\
+
+Solution: Posons $\mathcal A = \{B\in \mathcal{P}(E) | \exists \mathcal D \subset \mathcal C, D\text{ dénombrable et } B\in \sigma(\mathcal D)   \} $\newline
+Il suffit de prouver que $\mathcal A$ est une tribu sur $E$ contenant $\mathcal C$. On a alors $\sigma(\mathcal C) \subset \mathcal A$ et OK.\newline
+$\bullet$ $E\in \mathcal A$: il suffit de poser $\mathcal D = \{B\} \subset \mathcal C$ où $B$ est un élément de $\mathcal C$. On a bien $\mathcal D$ dénombrable et $E\in \sigma(\mathcal D)$.\newline
+$\bullet$ $A\in \mathcal A \implies A^c\in \mathcal A$: trivial.\newline
+$\bullet$ Soit $(A_i)\in (\mathcal A)^{\mathbb N}$. Pour chaque $i$ on dispose de $\mathcal D_i\subset \mathcal C$ dénombrable tel que $A_i\in \mathcal D_i$. Comme $\displaystyle \forall i, A_i\in \bigcup_n \mathcal D_n\subset \sigma(\bigcup_n \mathcal D_n)$, la stabilité par unions des tribus donne $\displaystyle \bigcup_n A_n\in \sigma(\bigcup_n \mathcal D_n)$. On a bien $\bigcup_n \mathcal D_n \subset \mathcal C$ et $\bigcup_n \mathcal D_n$ dénombrable. Donc $\bigcup_n A_n \in \mathcal A$.\newline
+$\bullet$ $\mathcal C \subset \mathcal A$: pour $B\in \mathcal C$, il suffit de poser $\mathcal D =\{B\}$.
+
+\subsection{}
+\fbox{
+\parbox{0.9\textwidth}{
+\textbf{Théorème $\pi-\lambda$} \newline Soit $X$ un ensemble. \newline$\mathcal C\subset \mathcal P(X)$ est appelé \underline{$\pi$-système} si $\mathcal C$ est stable par intersection finie.\newline  $\mathcal M\subset \mathcal P(X)$ est appelé \underline{$\lambda$-système} si \begin{itemize}[label=$\bullet$]
+    \item $X\in \mathcal M$
+    \item $\mathcal M$ stable par différence: pour $A,B\in \mathcal M$, $A\subset B \implies B\setminus A \in \mathcal M$
+    \item $\mathcal M$ est stable par réunion croissante.
+\end{itemize}
+Montrer que si $\mathcal C$ est un $\pi$-système, $\sigma(\mathcal C) = \lambda(\mathcal C)$ où $ \lambda(\mathcal C)$ est le $\lambda$-système minimal contenant $\mathcal C$.
+}
+}\\ \\
+
+Solution: On note $\displaystyle \mathcal D = \bigcap_{\mathcal M\subset \mathcal P(X), \mathcal M\text{ $\lambda$-système contenant $\mathcal C$}} \mathcal M$. \newline Une intersection quelconque de $\lambda$-systèmes étant un $\lambda$-système, $\mathcal D$ est un $\lambda$-système.\newline
+Montrons $\sigma(\mathcal C) = \mathcal D$.\newline
+\fbox{$\subset$} Il suffit de prouver que $\mathcal D$ est une tribu qui contient $\mathcal C$.\newline
+$\bullet$ $\mathcal C \subset \mathcal D$   \quad OK.
+\newline $\bullet$ $X\in \mathcal D$ car $\mathcal D$ $\lambda$-système.
+\newline $\bullet$ Soit $A\in \mathcal D$. Montrons que $A^c\in \mathcal D$.\newline
+Soit $\mathcal A$ un $\lambda$-système contenant $\mathcal C$. Comme $A\in \mathcal A$ et $X\in \mathcal A$ donc $X\setminus A = A^c\in \mathcal A$. D'où $A^c\in \mathcal D$.\newline
+$\bullet$ Soit $(A_i)$ une suite d'éléments de $\mathcal D$. Montrons que $\cup_i A_i\in \mathcal D$. Comme $\mathcal D$ est stable par union croissante et passage au complémentaire,  il suffit de prouver que $\mathcal D$ est stable par intersection finie.\newline \newline Pour $A\in \mathcal D$ on définit $\mathcal E_A = \{B\in \mathcal D | A\cap B \in \mathcal D\}$.\newline
+Soit $A\in \mathcal C$. \newline
+$\heartsuit$ Comme $\mathcal C$ est un $\pi$-système et $\mathcal C \subset \mathcal D$, on a $\mathcal C \subset \mathcal E_A$. \newline
+$\heartsuit$ On a $X\in \mathcal D$ et $X\cap A = A\in \mathcal D$ donc $X\in \mathcal E_A$. \newline
+$\heartsuit$ Pour $B\subset C$ éléments de $\mathcal E_A$, $A\cap (C\setminus B) = (A\cap C)\setminus (A\cap B) \in \mathcal D$.\newline
+$\heartsuit$ Pour $B_i$ une suite croissante d'éléments de $\mathcal E_A$, on a $A\cap (\cup_i B_i) = \cup_i (A\cap B_i)$.\newline Or $\forall i, A\cap B_i\in \mathcal D$ et les $A\cap B_i$ sont croissants, donc $A\cap (\cup_i B_i) \in \mathcal D$.\newline
+\underline{Conclusion}: Si $A\in \mathcal C$,  $\mathcal E_A$ est un $\lambda$-système contenant $\mathcal C$, donc $\mathcal D \subset \mathcal E_A$ \newline \newline
+Soit $A\in \mathcal D$. Pour $C\in \mathcal C$, comme $\mathcal D\subset \mathcal E_C$, on a $A\in \mathcal E_C$, donc $C\in \mathcal E_A$. D'où $\mathcal C \subset \mathcal E_A$. Comme précédemment, on montre que $\mathcal E_A$ est un $\lambda$-système. Par minimalité de $\mathcal D$, on a $\mathcal D \subset \mathcal E_A$.\newline
+Ceci étant vrai pour tout $A\in \mathcal D$, on en déduit que $\mathcal D$ est stable par intersection finie.\newline
+Finalement, $\mathcal D$ est une tribu contenant $\mathcal C$, donc $\sigma(\mathcal C)\subset \mathcal D$. \\\\
+\fbox{$\supset$} Une tribu étant un $\lambda$-système, on a $\sigma(\mathcal C) \subset \mathcal D$.
+
+\newpage
+\section{Mesures}
+
+\subsection{} \fbox{
+\parbox{0.9\textwidth}{Soit $(X,\mathcal A)$ un espace mesurable et $\mu:\mathcal A \to \mathbb R^+$ finiment additive, telle que $\mu(\emptyset)=0$ et $\mu(B)<\infty$ pour un $B\neq \emptyset$. On suppose que pour toute suite croissante $(A_i)\in \mathcal A$, $\mu(\cup_i A_i) = \lim_i \mu(A_i)$. Montrer que $\mu$ est une mesure.}} \\
+
+Solution: Soit $(A_i)\in \mathcal A$ disjoints. La suite $\displaystyle B_n:=\left( \bigcup_{i=1}^n A_i\right)_n$ est croissante et \newline$\mu(\cup_n A_n) = \mu(\cup_n B_n)=\lim_n \mu(B_n)=\lim_n \sum_{i=1}^n \mu(A_i) = \sum_{i=1}^{\infty} \mu(A_i)$
+
+\subsection{} \fbox{
+\parbox{0.9\textwidth}{Soit $(X,\mathcal A)$ un espace mesurable et $\mu:\mathcal A \to \mathbb R^+$ finiment additive, telle que $\mu(\emptyset)=0$ et $\mu(X)<\infty$. On suppose que pour toute suite $(A_n)\in \mathcal A$ qui décroît vers $\emptyset$ on a $\lim_i \mu(A_i) = 0$. Montrer que $\mu$ est une mesure.}} \\
+
+Solution: Soit $(A_i)$ une suite d'éléments disjoints de $\mathcal A$. Par additivité finie on a $\mu(\cup_i A_i) = \mu(\cup_{i=1}^nA_i) +\mu(\cup_{i=n+1}^{\infty}A_i)= \sum_{i=1}^n \mu(A_i)+\mu(\cup_{i=n+1}^{\infty}A_i)$. Or la suite des $\left(\cup_{i=n+1}^{\infty}A_i\right)$ tend en décroissant vers $\emptyset$. Donc $\lim_n \mu(\cup_{i=n+1}^{\infty}A_i) =0$. Donc $\mu(\cup_i A_i)  = \sum_{i=1}^{\infty} \mu(A_i)$.
+
+\subsection{} \fbox{
+\parbox{0.9\textwidth}{Soit $X$ un ensemble non-dénombrable et $\mathcal A$ la tribu des ensembles $A\in \mathcal{P}(X)$ tels que $A$ ou $A^c$ est dénombrable. On définit $\mu(A)=0$ si A dénombrable et $\mu(A)=1$ sinon. Montrer que $\mu$ est une mesure.}} \\
+
+Solution: $\emptyset \subset \mathbb N$ donc dénombrable, et $\mu(\emptyset)=0$.\newline
+Soit $(A_i)$ une suite d'éléments disjoints de $\mathcal A$. Si tous les $A_i$ sont dénombrables, il en est de même de $\cup_i A_i$ et $\mu(\cup_i A_i)=0=\sum_i \mu(A_i)$.\newline
+Sinon, il existe exactement un $A_i$ qui n'est pas dénombrable: si $A$ et $B$ disjoints sont non-dénombrables, $A\subset B^c$ donc $A$ dénombrable, ce qui est absurde. Donc  $\mu(\cup_i A_i)=1=\sum_i \mu(A_i)$.
+
+\subsection{} \fbox{
+\parbox{0.9\textwidth}{Soit $(X,\mathcal A,\mu)$ un espace mesuré et $A,B\in \mathcal A$. \newline Montrer que $\mu(A)+\mu(B) = \mu(A\cap B) + \mu(A\cup B)$.}}\\
+
+Solution: On a par additivité $\mu(A\cup B) = \mu(A\setminus A\cap B) + \mu(B)$ et en ajoutant $\mu(A\cap B)$ des deux côtés on obtient $ \mu(A\cup B)+\mu(A\cap B)=\mu(A)+\mu(B)$.
+
+\subsection{} \fbox{
+\parbox{0.9\textwidth}{Combinaison linéaire positive de mesures est une mesure}}
+
+\subsection{} \fbox{
+\parbox{0.9\textwidth}{Mesure trace}}
+
+\subsection{} \fbox{
+\parbox{0.9\textwidth}{($\bigstar$) \textbf{Une variante du théorème de Vitali–Hahn–Saks} \newline
+Soit $\mu_1,\mu_2,\ldots,$ une suite de mesures sur $(X,\mathcal A)$ telles que $\forall A\in \mathcal A, \mu_n(A)$ converge en croissant vers une valeur qu'on note $\mu(A)$. $\mu$ est-elle une mesure ? Qu'en est-il si $\forall A\in \mathcal A, \mu_n(A)$ converge en décroissant avec $\mu_1(X)<\infty$ ?}} \\
+
+Solution: Oui dans les deux cas. Dans les deux cas, \newline $\bullet$ $\mu$ est finiment additive: si $A$ et $B$ éléments disjoints de $\mathcal A$, $\mu(A\cup B) = \lim_{n\to \infty} \mu_n(A\cup B) =  \lim_{n\to \infty} (\mu_n(A)+\mu_n(B)) =\mu(A) + \mu(B)$\newline
+$\bullet$ $\mu$ est croissante: si $A\subset B$ sont des éléments de $\mathcal A$, comme $B=A\sqcup B\setminus A$, $\mu(B) = \lim_n \mu_n(B)  = \lim_n \mu_n(A\sqcup B\setminus A) = \lim_n (\mu_n(A)+ \mu_n(B\setminus A)) = \mu(A)+\mu(B\setminus A) \geq \mu(A)$. \newline \newline
+Dans le premier cas, on a pour $n\in \mathbb N$, $\sum_{i=1}^n\mu(A_i) = \mu( \cup_{i=1}^n A_i) \leq \mu( \cup_{i=1}^\infty A_i)$. \newline Donc $\sum_{i=1}^\infty \mu(A_i) \leq \mu( \cup_{i=1}^\infty A_i)$. \newline
+Dans l'autre direction, pour tout $\epsilon >0$, on dispose de $N\in \mathbb N$ tel que $$n\geq  N \implies \mu_n(\cup_{i=1}^\infty A_i)\geq \mu(\cup_{i=1}^\infty A_i)-\epsilon \implies \sum_{i=1}^\infty \mu_n(A_i)\geq \mu(\cup_{i=1}^\infty A_i)-\epsilon$$
+Par croissance des $\mu_i$ on a $\sum_{i=1}^\infty \mu(A_i) \geq \sum_{i=1}^\infty \mu_n(A_i) \geq \mu(\cup_{i=1}^\infty A_i)-\epsilon$. \newline
+Donc pour tout $\epsilon >0$, $\sum_{i=1}^\infty \mu(A_i) \geq \mu(\cup_{i=1}^\infty A_i)-\epsilon$, d'où l'inégalité voulue. \newline \newline
+Dans le deuxième cas, on a encore $\sum_{i=1}^\infty \mu(A_i) \leq \mu( \cup_{i=1}^\infty A_i)$. \newline Pour $n, N \in \mathbb N$, on a $$\begin{aligned} \mu(\cup_{i=1}^\infty A_i) &\leq \mu_n(\cup_{i=1}^\infty A_i)  = \sum_{i=1}^\infty \mu_n(A_i)\\ &=\sum_{i=1}^N \mu_n(A_i)  + \sum_{i=N+1}^\infty \mu_n(A_i)\\ &\leq \sum_{i=1}^N \mu_n(A_i)  + \sum_{i=N+1}^\infty \mu_1(A_i) \end{aligned}$$
+En passant à la limite sur $n$ dans l'inégalité on obtient $$\mu(\cup_{i=1}^\infty A_i) \leq \sum_{i=1}^N \mu(A_i)  + \sum_{i=N+1}^\infty \mu_1(A_i) $$
+Comme $\displaystyle \sum_{i=1}^\infty \mu_1(A_i)  = \mu_1(\cup_{i=1}^\infty A_i) <\infty$, $\displaystyle \lim_{N\to \infty}  \sum_{i=N+1}^\infty \mu_1(A_i) =0$\newline
+En passant à la limite sur $N$, on obtient $$\mu(\cup_{i=1}^\infty A_i) \leq \sum_{i=1}^\infty \mu(A_i)$$
+
+\subsection{}\fbox{
+\parbox{0.9\textwidth}{
+Soit $(X,\mathcal A, \mu)$ un espace mesuré, $\mathcal N$ l'ensemble des négligeables pour $\mu$ et $\mathcal B = \sigma(\mathcal A \cup \mathcal N)$. Montrer que $\mathcal B = \{A\cup N| A\in \mathcal A, N\in \mathcal N\}$.\newline
+Pour $B=A\cup N$, on définit $\overline \mu(B) = \mu(A) $. Montrer que $\overline \mu$ est bien définie, que c'est une mesure sur $\mathcal B$, que $(X,\mathcal B, \overline \mu)$ est complet, et que c'est la complétion minimale de $(X,\mathcal A, \mu)$.
+}}\\ \\
+
+Solution: Posons $\mathcal C = \{A\cup N| A\in \mathcal A, N\in \mathcal N\}$.  Montrons $\mathcal B = \mathcal C$.\newline
+\fbox{$\subset$} Il suffit de prouver que $\mathcal C$ est une tribu contenant $\mathcal A \cup \mathcal N$. \newline
+$\bullet$ $\mathcal A \cup \mathcal N \subset C$ \quad OK.\newline
+$\bullet$ $X = X\cup \emptyset \in C$.\newline
+$\bullet$ Soit $B\in \mathcal C$, $B= A\cup N$ avec $N\subset C$ où $A,C\in \mathcal A$, $N\in \mathcal N$ et $\mu(C)=0$.\newline
+On a $B^c = A^c \cap N^c = A^c \cap ((C\setminus N) \cup C^c) = \underbrace{(A^c \cap C^c)}_{\in \mathcal A}\cup \underbrace{(A^c \cap (C\setminus N))}_{\subset C}$\newline
+$\bullet$ Pour $B_i\in \mathcal C^{\mathbb N}$, $B_i = A_i \cup N_i$ avec $N_i\subset C_i$ et $\mu(C_i)=0$, \newline
+$\cup_i B_i = (\cup_i A_i) \cup (\cup_i N_i) $ avec $\cup_i N_i \subset \cup_i C_i$ et $\mu(\cup_i C_i)\leq \sum_i \mu(C_i) = 0$.\newline
+\fbox{$\supset$} $\mathcal C$ contient $\mathcal A$ et $\mathcal N$ donc $\forall A\in \mathcal A, N\in \mathcal N, A\cup N \in \mathcal C.$ \newline \newline
+Soit $B\in\mathcal B$, $B=A\cup N=A' \cup N'$ où $A,A'\in \mathcal A$, $N,N'\in\mathcal N$. Montrons que $\mu(A)=\mu(A')$.\newline On dispose de $C,C'\in \mathcal A$ de mesure nulle avec $N\subset C$ et $N'\subset C'$. Comme $A\subset A\cup N = A'\cup N'\subset A'\cup C'$ et $\mu(A'\cup C')\leq \mu(A')+\mu(C') = \mu(A')$, on a $\mu(A)\leq \mu(A')$. Par symétrie, $\mu(A')\leq \mu(A)$. Donc $\overline \mu$ est bien définie.\newline \newline
+On vérifie sans peine que $\overline \mu$ est une mesure sur $\mathcal B$.\newline
+Montrons que $(X,\mathcal B, \overline \mu)$ est complet. Soit $D$ un négligeable de $(X,\mathcal B, \overline \mu)$. On dispose de $A, C\in \mathcal A$ et $N\in \mathcal N$ tel que $D\subset A\cup N$, $N\subset C$ et $\mu(A)=\mu(C)=0$. Alors $D\subset A\cup C$ qui est dans $\mathcal A$ et de mesure nulle. Donc $D\in \mathcal N$. D'où $D\in \mathcal B$.\newline \newline
+Montrons que $(X,\mathcal B, \overline \mu)$ est la complétion minimale de $(X,\mathcal A,\mu) $. Clairement $\mathcal A\subset \mathcal B$ et $\overline \mu$ prolonge $\mu$. Si $(X,\mathcal B', \overline \mu')$ est une complétion de $(X,\mathcal A,\mu) $, $\mathcal B'$ est une tribu qui contient $\mathcal A$ et $\mathcal N$, donc $\mathcal B = \sigma(\mathcal A\cup \mathcal N)\subset \mathcal B'$.
+
+
+\subsection{} \fbox{
+\parbox{0.9\textwidth}{Sur $(\mathbb R, \mathcal B(\mathbb R))$ on considère deux mesures $m$ et $n$ telles que \newline $\forall a,b\in \mathbb R, a<b \implies m((a,b)) = n((a,b))$. Montrer que $m=n$.}}\\ \\
+
+Solution:  Soit $\mathcal C = \{(a,b), -\infty <a<b<\infty \}$ et pour $k\geq 1$, \newline $E_k = (-k,k)$ et $\mathcal D_k = \{A\in \mathcal B, m(A\cap E_k) =  n(A\cap E_k)\}$. \newline
+Montrons que $\mathcal D_k$ est un $\lambda$-système contenant $\mathcal C$. \newline \newline
+$\bullet$ $m(\mathbb R\cap E_k) = m(E_k)=m((-k,k))=n((-k,k))=n(\mathbb R\cap E_k)$ donc $\mathbb R\in \mathcal D_k$\newline
+ $\bullet$ Soient $A,B\in \mathcal D_k$ tels que $A\subset B$. Noter que $E_k\cap (B\setminus A) = (E_k\cap B)\setminus (E_k\cap A)$ et $(E_k\cap B)$ et $(E_k\cap A)$ sont de mesure finie (pour $m$ et $n$). Donc $$\begin{aligned}m(E_k\cap (B\setminus A)) &= m(E_k\cap B)-m(E_k\cap A)\\&=n(E_k\cap B)-n(E_k\cap A)\\&=n(E_k\cap (B\setminus A))\end{aligned}$$\newline
+D'où $B\setminus A\in \mathcal D_k$\newline
+$\bullet$ Si $(A_i)$ est une suite croissante de $\mathcal D_k$, $$\begin{aligned}m(E_k\cap (\cup_i A_i)) &= m(\cup_i(E_k\cap A_i))\\&= \lim_im(E_k\cap A_i)\\ &=\lim_i n(E_k\cap A_i)\\ &=n(E_k\cap (\cup_i A_i))  \end{aligned}$$\newline
+Donc $\cup_i A_i \in \mathcal D_k$\newline
+$\bullet$ $\mathcal C \subset \mathcal D_k$ car $\mathcal C$ est stable par intersection finie.\\
+
+Le théorème $\pi-\lambda$ implique $\sigma(\mathcal C)\subset \mathcal D_k$ i.e $\mathcal B\subset \mathcal D_k$. Donc pour tout $A\in \mathcal B$, $m(A\cap E_k) = n(A\cap E_k)$.
+
+Pour finir, étant donné $A\in \mathcal B$, $$\begin{aligned} m(A)&=m(\cup_i (A\cap E_i))\\ &= \lim_i m(A\cap E_i) \\ &= \lim_i n(A\cap E_i) \\&= n(A) \end{aligned}$$
+
+\newpage
+
+\subsection{} \fbox{
+\parbox{0.9\textwidth}{ Soit $(X,\mathcal A)$ mesurable et $\mathcal C\subset \mathcal A$. Soient $m$ et $n$ deux mesures $\sigma$-finies sur $(X,\mathcal A)$ qui coincident sur $\mathcal C$. Les mesures coincident-elles sur $\sigma(\mathcal C)$ ? Qu'en est-il si $m$ et $n$ sont finies ?
+}}\\ \\
+
+Solution: Non dans les deux cas. $X=\{1,2\}$, $\mathcal{C}=\{\{1\}\}$ et $m,n$ définies sur $\sigma(\mathcal{C})$ par $m(\{1\})=m(\{2\})=n(\{1\})=1$ and $n(\{2\})=2$
+
+\subsection{} \fbox{
+\parbox{0.9\textwidth}{\textbf{Lemme d'égalité des mesures} \newline
+Soit $(X,\mathcal A)$ espace mesurable, $\mathcal C$ un $\pi$-système, $\mu$ et $\nu$ deux mesures qui coincident sur $\mathcal C$ et telles que $\mu(X)=\nu(X)$. \newline On suppose qu'il existe $(E_i)\in \mathcal C$ tel que $X=\cup_i E_i$ et $\forall i , \mu(E_i)<\infty$.\newline
+Montrer que $\mu=\nu$ sur $\mathcal \sigma(C)$.
+}}\\ \\
+
+Solution: On suppose dans un premier temps que \underline{$\mu$ est finie}. \newline
+Soit $\mathcal B=\{A\in \mathcal A| \mu(A)=\nu(A)\}$. Il s'agit de montrer que $\mathcal B$ est un $\lambda$-système. On aura alors $\sigma(\mathcal C)\subset \mathcal B$ d'après le théorème $\pi$-$\lambda$.\newline
+$\bullet$ $X\in \mathcal B$ par hypothèse.\newline
+$\bullet$ Soit $A,B\in \mathcal B$ avec $A\subset B$. Comme $\mu$ est finie, on peut écrire $\mu(A\setminus B) = \mu(A)-\mu(B)=  \nu(A)-\nu(B)=\nu(A\setminus B)$.\newline
+$\bullet$ Soit $(A_i)\in \mathcal B$ une suite croissante. On a $\mu(\cup_i A_i)=\lim_i \mu(A_i)=\lim_i \nu(A_i)=\nu(\cup_i A_i)$.\newline
+\newline Dans le cas général, on peut supposer sans perte de généralité que les $E_i$ sont croissants.\newline
+On a pour $A\in \mathcal \sigma(\mathcal C)$, $\mu(A) = \mu(\cup_i (A\cap E_i)) = \lim_i \mu(A\cap E_i)$. \newline
+Par ailleurs, pour $i\in \mathbb N$, $\mu_i: A\mapsto \mu(A\cap E_i)$ est une mesure finie qui coincide avec $\nu_i: A\mapsto \nu(A\cap E_i)$ sur $\mathcal C$ (car $E_i \in \mathcal C$). D'après le point précédent, $\mu_i$ et $\nu_i$ coincident sur $\sigma(\mathcal C)$.\newline
+Donc $\mu(A) =\lim_i \mu(A\cap E_i)=\lim_i \mu_i(A)=\lim_i \nu_i(A) = \nu(A)$.
+
+\newpage
+\section{Construction de mesures}
+
+\subsection{} \fbox{
+\parbox{0.9\textwidth}{ Soit $\mu$ une mesure sur $\mathcal B(\mathbb R)$ finie sur tout compact de $\mathbb R$. On définit $\alpha(x) = \mu((0,x])$ si $x\geq 0$ et $\alpha(x) = -\mu((x,0])$ si $x< 0$. Montrer que $\mu$ est la mesure de Lebesgue-Stieltjes correspondant à $\alpha$.
+}}\\ \\
+
+Solution: Soit $\nu$ la mesure de L-S associée à $\alpha$. \newline $\bullet$ Par disjonction de cas et en utilisant le fait qu'une mesure extérieure $\mu^*$ coincide avec $l$ sur $\mathcal C$,  on montre que $\mu$ et $\nu$ coincident sur les $(a,b]$ (qui forment un $\pi$-système). \newline $\bullet$ De plus, comme $\mathbb R = \cup_n (-n,n]$, on a $\nu(\mathbb R) \leq \sum_i (\alpha(i)-\alpha(-i)) = \sum_i \mu((-i,i])\leq \mu(\mathbb R)$. \newline $\bullet$ Soit $A_i = (a_i,b_i]$ tel que $\cup_i A_i = \mathbb R$. On montre par disjonction de cas que $\alpha(b_i)-\alpha(a_i)=  \mu((a_i,b_i])$. D'où $\sum_i (\alpha(b_i)-\alpha(a_i)) = \sum_i \mu((a_i,b_i]) \geq \mu(\cup_i(a_i,b_i]) = \mu(\mathbb R)$. En passant à l'inf, on a $\nu(\mathbb R)\geq \mu(\mathbb R)$. \newline Donc $\nu(\mathbb R)= \mu(\mathbb R)$ \newline $\bullet$ D'autre part, $\mathbb R = \cup_n (-n,n]$ avec $\mu((-n,n])< \infty $. \newline \newline
+Toutes les conditions sont réunies pour utiliser le lemme d'égalité des mesures: on a $\mu = \nu$ sur $\mathcal B(\mathbb R)$.
+
+\subsection{} \fbox{
+\parbox{0.9\textwidth}{ Soit $m$ la mesure de Lebesgue et $A$ un Lebesgue mesurable tel que $m(A)<\infty$. Soit $\epsilon>0$. Montrer qu'il existe $F$ fermé et $G$ ouvert tels que $F\subset A \subset G$ et $m(G\setminus F)<\epsilon$.
+}} \\\\
+
+Solution: On dispose de $A_i=(a_i,b_i]$ tels que $A\subset \cup_i A_i$ et \newline $\sum_i (b_i-a_i) \leq m(A) + \epsilon/2$. Posons $b_i' = b_i + \epsilon 2^{-i-1}$. $G:=\cup_i (a_i,b_i')$ est un ouvert qui contient $A$ et $m(G)\leq \sum_i (b_i'-a_i) =\epsilon/2 + \sum_i (b_i-a_i) \leq m(A) + \epsilon   $. \newline
+Comme $m(A)<\infty$, $m(G \setminus A)=m(G) - m(A)\leq \epsilon$. \newline \newline
+Comme $m(A)<\infty$, à défaut d'être borné, $A$ est approchable à $\epsilon$ près par un borné. En effet, $m(A) = m(\cup_n (A\cap [-n,n])) = \lim_n m(A \cap [-n,n])$. On dispose donc de $N$ tel que $m(A \cap [-N,N])\geq m(A)-\epsilon/2$ \quad $(\star)$\newline
+Posons $A' = A \cap [-N,N]$. Comme $[-N,N]\setminus A'$ est de mesure finie, \newline d'après le point précédent, il existe $G'$ ouvert tel que  $[-N,N]\setminus A' \subset G'$ et $m(G'\setminus ( [-N,N]\setminus A'))\leq \epsilon/2$. \newline Montrons que le fermé $[-N,N]\setminus G'$ convient. \newline On vérifie sans peine $[-N,N]\setminus G'\subset A'$. D'autre part, $$\begin{aligned} m(A'\setminus ([-N,N]\setminus G')) &= m(A'\cap ([-N,N]^c \cup G'))\\ &= m(A'\cap G') \end{aligned}$$ et
+$$\begin{aligned} \epsilon/2 \geq m(G'\setminus ( [-N,N]\setminus A')) &= m((G'\cap [-N,N]^c) \cup (G'\cap A'))\\ &\geq m(G'\cap A')\end{aligned}$$
+Donc $m(A'\setminus ([-N,N]\setminus G')) \leq \epsilon/2$. En posant $F = [-N,N]\setminus G'$ on a donc $m(A') - m(F) \leq \epsilon/2$ \quad $(\star \star)$ \newline \newline
+ En combinant $(\star)$ et $(\star \star)$, on a $$m(A\setminus F) = m(A) - m(F) \leq (m(A') - m(F)) + \epsilon /2 \leq \epsilon $$
+ Finalement, on a $F\subset A \subset G$ et $m(G\setminus F)  = m(G\setminus A) + m(A\setminus F) \leq 2\epsilon$  \\\\
+ \fbox{
+\parbox{0.9\textwidth}{  \textbf{Extension du résultat précédent \underline{\smash{sans l'hypothèse $\mathbf{m(A)<\infty}$}}} Soit $m$ la mesure de Lebesgue et $A$ un Lebesgue mesurable.\newline  Soit $\epsilon>0$. Montrer qu'il existe $F$ fermé et $G$ ouvert tels que $F\subset A \subset G$ et $m(G\setminus F)<\epsilon$.
+}}\\\\
+Solution: Soit $A_n = \{x\in A\; | \; n-1\leq \left|x\right|<n\}$. Soit $\epsilon>0$. Pour chaque $n$, on dispose, d'après l'exercice 4.2, d'un ouvert $O_n$ tel que $A_n \subset O_n$ et $m(O_n\setminus A_n)\leq \epsilon/2^n$. Considérons l'ouvert $O = \cup_n O_n$. On a $A = \cup_i A_i \subset O$. \newline
+D'autre part, $\begin{aligned}[t] O\setminus A &= \left(\cup_i O_i \right)\setminus \left(\cup_i A_i\right) \\ &= \cup_i \left(O_i \cap \left(\cap_j A_j^c \right) \right)\\ &\subset \cup_i \left(O_i \cap A_i^c \right)\\ &= \cup_i \left( O_i \setminus A_i\right) \end{aligned}$\newline \newline
+Donc $m(O\setminus A) \leq \sum_i m(O_i\setminus A_i)\leq \epsilon$. \newline \newline
+Comme $A^c$ est Lebesgue-mesurable, il existe d'après ce qui précède un ouvert $G$ tel que $A^c\subset G$ et $m(G\setminus A^c)\leq \epsilon $. Alors $G^c \subset A$ et $m(A\setminus G^c) = m(A\cap G)  = m(G \setminus A^c) \leq \epsilon $. \newline
+En posant $F = G^c$, on a $F\subset A \subset G$ et $m(G\setminus F)\leq 2\epsilon$ \newline \newline
+\underline{Note}: Dans le cas où $m(A)<\infty$, la preuve précédente montre qu'on peut choisir $F$ fermé et borné, donc compact.
+
+
+\newpage
+ \subsection{} \fbox{
+\parbox{0.9\textwidth}{ Soit $(X,A,\mu)$ un espace mesuré. On définit, pour $A\subset X$,  $$\mu^*(A) = \inf \{\mu(B) | A\subset B, B\in \mathcal A\}$$
+Montrer que $\mu^*$ est une mesure extérieure. Montrer que $\mathcal A$ est inclus dans les $\mu^*$-mesurables et que $\mu^*$ coincide avec $\mu$ sur $\mathcal A$.
+}} \\ \\
+
+Solution: $\bullet$ $\emptyset \subset \emptyset\in \mathcal A$ donc $\mu^*(\emptyset)\leq \mu(\emptyset) = 0$ \newline
+$\bullet$ Soit $A,B$ avec $A\subset B$. Considérons $C\in \mathcal A$ tel que $B\subset C$. Alors $A\subset C$, donc $\mu^*(A)\leq \mu(C)$. En passant à l'inf on obtient $\mu^*(A)\leq \mu^*(B)$. \newline
+$\bullet$ Soit $\epsilon>0$ et $(A_i)\subset X$. Pour chaque $i$, on dispose de $B_i \in\mathcal A$ tel que $A_i \subset B_i$ et $\mu(B_i) \leq \mu^*(A_i) + \epsilon /2^{i}$. Alors $\cup_i A_i \subset \cup_i B_i \in \mathcal A$, donc \newline \centerline{$\mu^*(\cup_i A_i) \leq \mu(\cup_i B_i) \leq \sum_i \mu(B_i) \leq \sum_i \mu^*(A_i) + \epsilon $}\newline
+Ceci étant vrai pour tout $\epsilon$, on a le résultat. \newline \newline
+Soit $A\in \mathcal A$. Montrons que $A$ est $\mu^*$-mesurable. Soit $E\subset X$. Il suffit de montrer $\mu^*(A\cap E) + \mu^*(A^c \cap E) \leq \mu^*(E)$.\newline
+Pour $\epsilon>0$, on dispose de $B\in \mathcal A$ tel que $E\subset B$ et $\begin{aligned}[t] \mu^*(E)+\epsilon &\geq \mu(B) \\ &= \mu(\underbrace{B\cap A}_{\supset E\cap A}) + \mu(\underbrace{B\cap A^c}_{\supset E\cap A^c})\\ &\geq \mu^*(E\cap A) + \mu^*(E \cap A^c) \end{aligned}$
+Ceci étant vrai pour tout $\epsilon$, on a l'inégalité recherchée. \newline \newline
+Soit $A\in \mathcal A$. Montrons $\mu^*(A) = \mu(A)$. Comme $A\subset A \in\mathcal A$, on a $\mu^*(A)\leq \mu(A)$.
+Par croissance de la mesure $\mu$ et passage à l'inf, on a l'inégalité inverse. \\
+
+ \subsection{} \fbox{
+\parbox{0.9\textwidth}{ Soit $m$ la mesure de L-S associée à la fonction croissante continue à droite $\alpha$. Montrer que pour tout $x\in \mathbb R$, $m(\{x\}) = \alpha(x) -\alpha(x-)$.
+
+}} \\ \\
+Solution: On a $\begin{aligned}[t] m(\{x\}) &= m(\cap_n (x-\frac 1n , x])\\
+&= \lim_n m((x-\frac 1n , x]) \quad \text{car } m((x-1,x]))=\alpha(x)-\alpha(x-1) <\infty \\ &= \lim_n \left(\alpha(x) - \alpha(x-\frac 1n)\right) \quad \text{car $m$ coincide avec $l$ sur les (a,b]} \\ &= \alpha(x) - \alpha(x-)  \end{aligned}$
+
+
+\subsection{} \fbox{
+\parbox{0.9\textwidth}{ Soit $m$ la mesure de Lebesgue, $c\in\mathbb R$ et $A$ un Lebesgue-mesurable. Montrer que $m(A+c) = m(A)$ et $m(cA) = |c|m(A)$.
+}}\\ \\
+
+Solution: La démonstration ne pose pas de problème. Penser à étudier l'effet de $x\mapsto \frac x c$ sur $(a_i,b_i]$ selon le signe de $c$.\\
+
+
+\subsection{} \fbox{
+\parbox{0.9\textwidth}{
+\textbf{Premier lemme de Borel-Cantelli}\newline
+Soit $m$ la mesure de Lebesgue. Soit $A_n$ des Lebesgue-mesurables inclus dans $[0,1]$ et $B = \limsup A_n = \cap_n \cup_{k\geq n} A_k$. \newline
+(1) Montrer que $B$ est Lebesgue-mesurable. \newline
+(2) Si $m(A_n)>\delta>0$ pour tout $n$, montrer que $m(B)\geq \delta$.\newline
+(3) Si $\sum_n m(A_n)<\infty$, montrer que $m(B)=0$. \newline
+(4) (Réciproque) Donner un exemple de $A_n$ tels que $m(B)=0$ mais $\sum_n m(A_n)=\infty$.
+}} \\ \\
+
+Solution: (1) $B$ est intersection dénombrable de Lebesgue-mesurables. \newline
+(2) On note que $(\cup_{k\geq n} A_k)_n$ décroit et $\cup_{k\geq 1} A_k \subset [0,1]$ donc de mesure finie.\newline Donc $m(B) = m(\cap_n (\cup_{k\geq n} A_k))=\lim_n m(\cup_{k\geq n} A_k) \geq \delta$.\newline
+(3) $m(B) = m(\cap_n (\cup_{k\geq n} A_k))=\lim_n m(\cup_{k\geq n} A_k)\leq \lim_n \sum_{k\geq n} m(A_k) = 0$.\newline
+(4) $A_n = [0,\frac 1n]$ \\
+
+\subsection{} \fbox{
+\parbox{0.9\textwidth}{
+Soit $0<\epsilon<1$ et $m$ la mesure de Lebesgue. Exhiber un mesurable $E\subset [0,1]$ dont l'adhérence est $[0,1]$ et dont la mesure est nulle.
+}}\\\\
+
+Solution: Montrons que $E=\left([0,\epsilon] \cap \mathbb Q^c \right) \cup \left( [0,1] \cap \mathbb Q\right)$ convient. \newline
+On a $\begin{aligned}[t] m(E) &= m([0,\epsilon] \cap \mathbb Q^c ) + m([0,1] \cap \mathbb Q) \\ &= m([0,\epsilon]) - m([0,\epsilon] \cap \mathbb Q) + \underbrace{0}_{\text{car $[0,1] \cap \mathbb Q$  dénombrable}} \\ &= \epsilon - 0 \quad \text{ pour la même raison}   \end{aligned}$
+\newline \newline
+\underline{Note}: On prend un intervalle de longueur $\epsilon$ et on ajoute des poussières denses de mesure nulle.
+
+\subsection{} \fbox{
+\parbox{0.9\textwidth}{
+Si $X$ est un métrique, $\mathcal B$ la tribu des boréliens et $\mu$ une mesure sur $(X,\mathcal B)$, on définit le support de $\mu$ comme étant le plus petit fermé $F$ tel que $\mu(F^c)=0$. Montrer que si $F$ est un fermé de $[0,1]$, il existe une mesure finie sur $[0,1]$ dont le support est $F$.
+}}\\\\
+
+Solution: On distingue deux cas: \newline
+$\bullet$ $F$ est fini, $F=\{a_1, \ldots, a_n\}$. On définit $\mu = \sum_{i=1}^n \delta_{a_i}$. On a bien $\mu(F^c)=0$, et si $\mu(G^c)=0$, alors pour tout $i$, $\delta_{a_i}(G^c)=0$, donc $a_i\in G$ pour tout $i$ et $F\subset G$. \newline
+$\bullet$ $F$ est infini. $F$ étant séparable, on dispose de $(a_i)\in F^{\mathbb N}$ une suite dense dans $F$. On définit $$\mu = \sum_{i=1}^\infty \frac{\delta_{a_i}}{2^i} $$ \newline
+$\mu$ est finie, $\mu(F^c)=0$ et si $G$ est un fermé tel que $\mu(G^c)=0$, alors $\{a_i | i\geq 1\} \subset G$ et en passant à l'adhérence on a $F\subset G$.
+
+
+
+\subsection{} \fbox{
+\parbox{0.9\textwidth}{
+}}
+
+% TENIR COMPTE DES MODIFS DE L EXO 4.2
+\subsection{} \fbox{
+\parbox{0.9\textwidth}{
+Soit $0<\epsilon<1$, $m$ le mesure de Lebesgue et $A$ un Lebesgue-mesurable. On suppose que pour tout intervalle $I$, on a $m(A\cap I) \leq (1-\epsilon) m(I)$. \newline
+Montrer que $m(A)=0$.
+}}\\ \\
+
+Solution: Soit $\epsilon' >0$. D'après 4.2, on dispose d'un ouvert $G$ tel que $A\subset G$ et $m(G\setminus A)\leq \epsilon'$. Pour tout intervalle $I$ on a $m(A\cap I) + m($ testi
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
