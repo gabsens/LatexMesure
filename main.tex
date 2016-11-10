@@ -259,11 +259,13 @@ Donc $m(A'\setminus ([-N,N]\setminus G')) \leq \epsilon/2$. En posant $F = [-N,N
  \fbox{
 \parbox{0.9\textwidth}{  \textbf{Extension du résultat précédent \underline{\smash{sans l'hypothèse $\mathbf{m(A)<\infty}$}}} Soit $m$ la mesure de Lebesgue et $A$ un Lebesgue mesurable.\newline  Soit $\epsilon>0$. Montrer qu'il existe $F$ fermé et $G$ ouvert tels que $F\subset A \subset G$ et $m(G\setminus F)<\epsilon$.
 }}\\\\
-Solution: Soit $A_n = \{x\in A\; | \; n-1\leq \left|x\right|<n\}$. Soit $\epsilon>0$. Pour chaque $n$, on dispose, d'après l'exercice 4.2, d'un ouvert $O_n$ tel que $A_n \subset O_n$ et $m(O_n\setminus A_n)\leq \epsilon/2^n$. Considérons l'ouvert $O = \cup_n O_n$. On a $A = \cup_i A_i \subset O$. \newline
-D'autre part, $\begin{aligned}[t] O\setminus A &= \left(\cup_i O_i \right)\setminus \left(\cup_i A_i\right) \\ &= \cup_i \left(O_i \cap \left(\cap_j A_j^c \right) \right)\\ &\subset \cup_i \left(O_i \cap A_i^c \right)\\ &= \cup_i \left( O_i \setminus A_i\right) \end{aligned}$\newline \newline
-Donc $m(O\setminus A) \leq \sum_i m(O_i\setminus A_i)\leq \epsilon$. \newline \newline
-Comme $A^c$ est Lebesgue-mesurable, il existe d'après ce qui précède un ouvert $G$ tel que $A^c\subset G$ et $m(G\setminus A^c)\leq \epsilon $. Alors $G^c \subset A$ et $m(A\setminus G^c) = m(A\cap G)  = m(G \setminus A^c) \leq \epsilon $. \newline
-En posant $F = G^c$, on a $F\subset A \subset G$ et $m(G\setminus F)\leq 2\epsilon$ \newline \newline
+Solution: Posons $A_n = E\cap [-n,n]$. Chaque $A_n$ étant de mesure finie, on dispose, d'après ce qui précède de $G_n$ ouvert tel que $A_n\subset G_n$ et $m(G_n\setminus A_n)\leq \epsilon/2^n$. Posons $G=\cup_n G_n$. Comme $E=\cup_n A_n$, $\begin{aligned}[t] m(G\setminus E) &= m(\cup_n G_n \setminus \left(\cup_k A_k \right)) \\ 
+&= m(\cup_n \left( G_n \cap \cap_k A_k^c \right)) \\ &\leq m(\cup_n \left( G_n \cap A_n^c \right)) \\ &\leq \sum_n m(G_n \setminus A_n)\\ &\leq \epsilon \end{aligned}$ \newline
+$G$ est donc un ouvert qui convient.
+ \newline \newline
+Comme $A^c$ est Lebesgue-mesurable, il existe d'après ce qui précède un ouvert $O$ tel que $A^c\subset O$ et $m(O\setminus A^c)\leq \epsilon $. Alors $O^c \subset A$ et $m(A\setminus O^c) = m(A\cap O)  = m(O \setminus A^c) \leq \epsilon $. \newline
+En posant $F = O^c$, on a $F\subset A \subset G$ et $m(G\setminus F)\leq 2\epsilon$ \newline \newline
+
 \underline{Note}: Dans le cas où $m(A)<\infty$, la preuve précédente montre qu'on peut choisir $F$ fermé et borné, donc compact.
 
 
@@ -346,13 +348,29 @@ Soit $0<\epsilon<1$, $m$ le mesure de Lebesgue et $A$ un Lebesgue-mesurable. On 
 Montrer que $m(A)=0$.
 }}\\ \\
 
-Solution: Soit $\epsilon' >0$. D'après 4.2, on dispose d'un ouvert $G$ tel que $A\subset G$ et $m(G\setminus A)\leq \epsilon'$. Pour tout intervalle $I$ on a \newline \centerline{$\begin{aligned}[t] m(A\cap I) + m((G\setminus A)\cap I) &\leq (1-\epsilon)m(I) + m((G\setminus A)\cap I)\\\implies m(G \cap I) &\leq (1-\epsilon)m(I) + m((G\setminus A))\\ \implies m(G \cap I) &\leq (1-\epsilon)m(I) + \epsilon' \end{aligned}$ }
+Solution: On suppose dans un premier temps $\underline{\smash{m(A)<\infty}}$. \newline Soit $\epsilon' >0$. D'après 4.2, on dispose d'un ouvert $G$ tel que $A\subset G$ et $m(G\setminus A)\leq \epsilon'$. \newline On écrit $G = \cup_i (a_i,b_i)$. Alors $\begin{aligned}[t] m(A) &= m(\cup_i (A\cap (a_i,b_i))\\ &\leq \sum_i m(A\cap (a_i,b_i)) \\ &\leq (1-\epsilon) m(G) \\ &\leq (1-\epsilon)(m(A) + \epsilon') \end{aligned}$\newline 
+En faisant $\epsilon' \to 0$, on a $m(A) \leq (1-\epsilon)m(A)$, donc $m(A) = 0$.\newline \newline
+Dans le cas général, on note que pour $J$ un intervalle borné et $I$  un intervalle quelconque, $m(A\cap J \cap I) \leq (1-\epsilon)m(J\cap I) \leq (1-\epsilon)m(I)$. \newline Le mesurable $A\cap J$ vérifie donc les conditions précédentes, d'où $m(A\cap J)=0$. \newline
+Finalement, $m(A) = m(\cup_n (A\cap (-n,n))\leq \sum_n m(A\cap (-n,n)) = \sum_n 0 = 0$ \newline \newline
+\underline{Note}: $\bullet$ La contraposée est intéressante: si $A$ est un Lebesgue-mesurable tel que $m(A)>0$, alors pour tout $0<\delta<1$, il existe un intervalle $I$ "de haute densité dans $A$", au sens où $\delta < \frac{m(A\cap I)}{m(I)}\leq 1$. \newline 
+$\bullet$ La preuve précédente montre qu'on peut en plus supposer \underline{$I$ ouvert des deux côtés et borné}.
 
+\subsection{} \fbox{
+\parbox{0.9\textwidth}{ \textbf{Théorème de Steinhaus}\newline
+Soit $m$ la mesure de Lebesgue et $A$ un Lebesgue-mesurable tel que $m(A)>0$. On note $A-A=\{a-b, (a,b)\in A^2\}$. \newline Alors $0$ appartient à l'intérieur de $A-A$.
+}} \\ \\
 
-
-
-
-
+Solution: Supposons par l'absurde que $0$ n'est pas dans l'intérieur de $A-A$. Alors on dispose de $(x_n) \in (A-A)^{\mathbb N}$ telle que $x_n\to 0$.\newline
+Comme $m(E)>0$, d'après 4.10, on dispose, pour $0<\epsilon<1$, d'un intervalle ouvert borné $I$ tel que $m(I\cap A) > (1-\epsilon)m(I)$.\newline
+On note également que $A+x_n\subset A^c$ et $$\begin{aligned}[t] m(I \cap (A + x_n )) &= m((I-x_n)\cap A) \quad \text{ invariance par translation} \\
+&\geq m(I\cap (I-x_n)\cap A) \\
+&= m(I\cap A) -  m((I\setminus (I-x_n)) \cap A) \\ 
+&\geq m(I\cap A) - m(I\setminus (I-x_n))\\
+&\geq (1-\epsilon)m(I) - m(I\setminus (I-x_n))
+\end{aligned}$$ 
+Pour $n$ suffisamment grand, $m(I\setminus (I-x_n)) =  |x_n|$. Soit $N$ tel que $|x_N|\leq  m(I)\epsilon$.\newline
+Comme $A$ et $A+x_N$ sont disjoints, on obtient en sommant $m(I)> (2-3\epsilon)m(I)$.\newline
+Ceci est absurde dès lors que $\epsilon <\frac 13$.
 
 
 
