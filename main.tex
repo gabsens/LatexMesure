@@ -403,7 +403,19 @@ Considérons une suite $(a_n)_{n\geq 1}$ de réels $>0$ telle que $\sum_{n=1}^\i
  &\leq m(I) \quad \text{car inclus dans I}\end{aligned}$\newline
  Conclusion: $0<m(M\cap I)<m(I)$.
 
+\subsection{} \fbox{
+\parbox{0.9\textwidth}{ Soit $N$ l'ensemble non-mesurable de Vitali. Montrer que si $A\subset N$ est un Lebesgue-mesurable, alors $m(A)=0$
+}}\\ \\
 
+Solution: Rappelons que $N$ contient pour chaque classe d'équivalence un unique représentant. Les éléments de $A$ sont donc les représentants de classes d'équivalence disjointes. Par conséquent, les $A+q$ sont disjoints lorsque $q\in \mathbb Q$. D'autre part, on a encore $\cup_{q\in \mathbb Q \cap [-1,1]} (A+q) \subset [-1,2]$. Les $A+q$ étant disjoints et mesurables (non-trivial) et l'invariance par translation de la mesure extérieure (vraie sur $\mathcal P(\mathbb R)$) impliquent $3\geq \sum_{q\in \mathbb Q \cap [-1,1]} m(A+q) = \sum_{q\in \mathbb Q \cap [-1,1]} m(A)$, donc $m(A)=0$.
+
+\subsection{} \fbox{
+\parbox{0.9\textwidth}{Soit $m$ la mesure de Lebesgue. Montrer que si $A$ est un Lebesgue-mesurable de mesure $>0$, il existe une partie de $A$ qui n'est pas mesurable.
+}}\\ \\
+
+Solution: Comme $m(A) = \lim_n m(A\cap [-n,n])$, on dispose de $N$ tel que $m(A\cap [-N,N])>0$. Soit $A'=A\cap [-N,N]$. Sur $A'$ on considère la relation d'équivalence $xRy\iff x-y\in\mathbb Q$. Soit $B$ un ensemble qui contient, pour chaque classe $\gamma$ un unique élément de $\gamma$. Supposons $B$ mesurable. On remarque que $A'\subset \cup_{q\in \mathbb Q\cap [-2N,2N]}(B+q)$. Les $B+q$ étant mesurables et disjoints, on obtient $0<m(A')\leq \sum_{q\in \mathbb Q\cap [-2N,2N]}m(B+q) = \sum_{q\in \mathbb Q\cap [-2N,2N]}m(B) $, donc $m(B)>0$. \newline
+D'autre part, $\cup_{q\in \mathbb Q\cap [-2N,2N]}(B+q) \subset [-3N,3N]$, donc $\sum_{q\in \mathbb Q\cap [-2N,2N]}m(B) \leq 6N$, d'où $m(B)=0$.\newline
+Absurde.
 
 
 
