@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.9.24)  9 NOV 2016 21:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.9.24)  11 NOV 2016 16:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -764,22 +764,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 257--268
  []
 
 [12]
-Underfull \hbox (badness 10000) in paragraph at lines 274--275
+Underfull \hbox (badness 10000) in paragraph at lines 276--277
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 274--275
+Underfull \hbox (badness 10000) in paragraph at lines 276--277
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 276--285
+Underfull \hbox (badness 10000) in paragraph at lines 278--287
 
  []
 
 
-Overfull \hbox (31.68617pt too wide) in paragraph at lines 276--285
+Overfull \hbox (31.68617pt too wide) in paragraph at lines 278--287
 \T1/cmr/m/n/10 Pour $\OML/cmm/m/it/10 ^^O > \OT1/cmr/m/n/10 0$\T1/cmr/m/n/10 , 
 on dis-pose de $\OML/cmm/m/it/10 B \OMS/cmsy/m/n/10 2 A$ \T1/cmr/m/n/10 tel que
  $\OML/cmm/m/it/10 E \OMS/cmsy/m/n/10 ^^Z \OML/cmm/m/it/10 B$ \T1/cmr/m/n/10 et
@@ -787,91 +787,146 @@ on dis-pose de $\OML/cmm/m/it/10 B \OMS/cmsy/m/n/10 2 A$ \T1/cmr/m/n/10 tel que
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 276--285
+Underfull \hbox (badness 10000) in paragraph at lines 278--287
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 276--285
+Underfull \hbox (badness 10000) in paragraph at lines 278--287
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 289--292
+Underfull \hbox (badness 10000) in paragraph at lines 291--294
 
  []
 
 
-Overfull \hbox (36.51453pt too wide) in paragraph at lines 289--292
+Overfull \hbox (36.51453pt too wide) in paragraph at lines 291--294
 \T1/cmr/m/n/10 Solution : On a $[] []$ 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 296--297
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 296--297
-
- []
-
-[13]
 Underfull \hbox (badness 10000) in paragraph at lines 298--299
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 309--310
+Underfull \hbox (badness 10000) in paragraph at lines 298--299
+
+ []
+
+[13]
+Underfull \hbox (badness 10000) in paragraph at lines 300--301
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 309--310
+Underfull \hbox (badness 10000) in paragraph at lines 311--312
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 311--315
+Underfull \hbox (badness 10000) in paragraph at lines 311--312
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 319--320
+Underfull \hbox (badness 10000) in paragraph at lines 313--317
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 319--320
+Underfull \hbox (badness 10000) in paragraph at lines 321--322
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 321--325
+Underfull \hbox (badness 10000) in paragraph at lines 321--322
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 329--330
+Underfull \hbox (badness 10000) in paragraph at lines 323--327
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 329--330
+Underfull \hbox (badness 10000) in paragraph at lines 331--332
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 331--332
 
  []
 
 [14]
-Underfull \hbox (badness 10000) in paragraph at lines 347--348
+Underfull \hbox (badness 10000) in paragraph at lines 349--350
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 347--348
+Underfull \hbox (badness 10000) in paragraph at lines 349--350
 
  []
 
-[15] (./main.aux) ) 
+
+Underfull \hbox (badness 10000) in paragraph at lines 351--357
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 351--357
+
+ []
+
+[15]
+Underfull \hbox (badness 10000) in paragraph at lines 361--362
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 361--362
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 363--366
+
+ []
+
+[16]
+Underfull \hbox (badness 10000) in paragraph at lines 381--382
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 381--382
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 383--405
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 383--405
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 383--405
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 383--405
+
+ []
+
+[17] (./main.aux) ) 
 Here is how much of TeX's memory you used:
  3310 strings out of 493014
  41043 string characters out of 6133351
@@ -887,21 +942,22 @@ s/cm/cmbx10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts
 cm/cmmi10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/c
 m/cmmi5.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/
 cmmi7.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-r10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7
-.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.
-pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pf
-b></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/symbols/msam1
-0.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/symbols/m
-sbm10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/symbo
-ls/msbm7.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sf
-bx1000.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfbx
-1200.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfrm07
-00.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfrm1000
-.pfb>
-Output written on main.pdf (15 pages, 235148 bytes).
+r10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5
+.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pf
+b></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
+></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><
+/usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.p
+fb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm
+10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/symbols/
+msbm7.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfbx1
+000.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfbx120
+0.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfrm0700.
+pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pf
+b>
+Output written on main.pdf (17 pages, 253811 bytes).
 PDF statistics:
- 118 PDF objects out of 1000 (max. 8388607)
- 84 compressed objects within 1 object stream
+ 128 PDF objects out of 1000 (max. 8388607)
+ 91 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

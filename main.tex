@@ -353,15 +353,16 @@ En faisant $\epsilon' \to 0$, on a $m(A) \leq (1-\epsilon)m(A)$, donc $m(A) = 0$
 Dans le cas général, on note que pour $J$ un intervalle borné et $I$  un intervalle quelconque, $m(A\cap J \cap I) \leq (1-\epsilon)m(J\cap I) \leq (1-\epsilon)m(I)$. \newline Le mesurable $A\cap J$ vérifie donc les conditions précédentes, d'où $m(A\cap J)=0$. \newline
 Finalement, $m(A) = m(\cup_n (A\cap (-n,n))\leq \sum_n m(A\cap (-n,n)) = \sum_n 0 = 0$ \newline \newline
 \underline{Note}: $\bullet$ La contraposée est intéressante: si $A$ est un Lebesgue-mesurable tel que $m(A)>0$, alors pour tout $0<\delta<1$, il existe un intervalle $I$ "de haute densité dans $A$", au sens où $\delta < \frac{m(A\cap I)}{m(I)}\leq 1$. \newline 
-$\bullet$ La preuve précédente montre qu'on peut en plus supposer \underline{$I$ ouvert des deux côtés et borné}.
+$\bullet$ La preuve précédente montre qu'on peut en plus supposer $I$ ouvert des deux côtés.
 
 \subsection{} \fbox{
 \parbox{0.9\textwidth}{ \textbf{Théorème de Steinhaus}\newline
 Soit $m$ la mesure de Lebesgue et $A$ un Lebesgue-mesurable tel que $m(A)>0$. On note $A-A=\{a-b, (a,b)\in A^2\}$. \newline Alors $0$ appartient à l'intérieur de $A-A$.
 }} \\ \\
 
-Solution: Supposons par l'absurde que $0$ n'est pas dans l'intérieur de $A-A$. Alors on dispose de $(x_n) \in (A-A)^{\mathbb N}$ telle que $x_n\to 0$.\newline
-Comme $m(E)>0$, d'après 4.10, on dispose, pour $0<\epsilon<1$, d'un intervalle ouvert borné $I$ tel que $m(I\cap A) > (1-\epsilon)m(I)$.\newline
+Solution: Comme $0<m(A) = \lim_n m(A \cap (-n,n))$, on dispose de $N$ tel que $m(A\cap (-N,N))>0$. Posons $B=A \cap (-N,N)$. Si on prouve que $0$ est intérieur à $B-B$, l'inclusion $B-B\subset A-A$ permet de conclure que $0$ est intérieur à $A$. Dans la suite, on pourra donc supposer sans perte de généralité que $m(A)<\infty$. \newline \newline 
+Supposons par l'absurde que $0$ n'est pas dans l'intérieur de $A-A$. Alors on dispose de $(x_n) \in (A-A)^{\mathbb N}$ telle que $x_n\to 0$.\newline
+Comme $m(A)>0$, d'après 4.10, on dispose, pour $0<\epsilon<1$, d'un intervalle ouvert $I$ tel que $m(I\cap A) > (1-\epsilon)m(I)$, ce qui implique $m(I)<\infty$. \newline
 On note également que $A+x_n\subset A^c$ et $$\begin{aligned}[t] m(I \cap (A + x_n )) &= m((I-x_n)\cap A) \quad \text{ invariance par translation} \\
 &\geq m(I\cap (I-x_n)\cap A) \\
 &= m(I\cap A) -  m((I\setminus (I-x_n)) \cap A) \\ 
@@ -370,11 +371,37 @@ On note également que $A+x_n\subset A^c$ et $$\begin{aligned}[t] m(I \cap (A + 
 \end{aligned}$$ 
 Pour $n$ suffisamment grand, $m(I\setminus (I-x_n)) =  |x_n|$. Soit $N$ tel que $|x_N|\leq  m(I)\epsilon$.\newline
 Comme $A$ et $A+x_N$ sont disjoints, on obtient en sommant $m(I)> (2-3\epsilon)m(I)$.\newline
-Ceci est absurde dès lors que $\epsilon <\frac 13$.
+Ceci est absurde dès que $\epsilon <\frac 13$.
 
+\newpage
+\subsection{} \fbox{
+\parbox{0.9\textwidth}{
+Soit $m$ la mesure de Lebesgue. Construire une borélien $A$ tel que \newline
+$0<m(A\cap I)<m(I)$ pour tout intervalle ouvert $I$ non réduit à un point.
+}}\\\\
 
-
-
+Solution: Démontrons d'abord le lemme suivant: \newline \newline
+\fbox{\parbox{0.9\textwidth}{ Soit $I$ un intervalle de $\mathbb R$ non réduit à un point. Alors pour tout $0<\delta< m(I)$,\newline
+ $I$ contient un fermé d'intérieur vide de mesure $\delta$.
+}} \\ \\
+On s'inspire de la construction de l'ensemble de Cantor. \newline
+Etant donné un segment $J$ et $0<\alpha<1$, on dit qu'on enlève le $\alpha$-milieu de $J$ lorsqu'on considère $J\setminus (m- \frac{\alpha\ell(J)}2, m+ \frac{\alpha\ell(J)}2)$ où $m$ dénote le milieu de $J$. \newline
+Soit $0<\delta < m(I)$. \newline
+Soit $0<\epsilon<\frac{m(I)}{\delta}-1$, de sorte que $\delta(1+\epsilon)<m(I)$. En partant d'un segment $K_0\subset I$ de mesure $\delta(1+\epsilon)$, et d'une suite $(\alpha_i)_{i\geq 1}$ de réels de $(0,1)$, on obtient un compact $K_1$ en enlevant le $\alpha_1$-milieu de $K_0$, puis $K_2$ en enlevant les $\alpha_2$-milieux des deux segments composant $K_1$ et ainsi de suite. Soit $K=\cap_n K_n$. On remarque que $m(K_n) = (1-\alpha_n)m(K_{n-1})$, donc $m(K_n) = m(K_0)\prod_{k=1}^n (1-\alpha_k)$. \newline
+$(K_n)$ étant décroissante, \newline 
+\centerline{$m(K) = \lim_n \left(m(K_0)\prod_{k=1}^n (1-\alpha_k)\right)=\delta(1+\epsilon) \lim_n \left(\prod_{k=1}^n (1-\alpha_k)\right)$} \newline \newline
+Considérons une suite $(a_n)_{n\geq 1}$ de réels $>0$ telle que $\sum_{n=1}^\infty a_n = -\ln\left(\frac{1}{1+\epsilon}\right)$. Posons $\alpha_n=1-\exp(-a_n)$. Alors $\sum_{n\geq 1}\ln (1-\alpha_n)$ converge vers $\frac{1}{1+\epsilon}$. Avec cette suite $(\alpha_n)$, \newline 
+ \centerline{$m(K) = \delta(1+\epsilon)\cdot\frac{1}{1+\epsilon}  = \delta$} \newline
+ $K$ est clairement fermé borné. On montre facilement par récurrence que $K_n$ est union disjointe de $2^n$ segments de même longueur. La longueur de chaque segment de $K_n$ est donc majorée par $\frac{m(K_0)}{2^n}$. Ceci prouve en particulier que $K$ est d'intérieur vide. \newline
+ \newline
+ Soit $(I_i)_{i\geq 1}$ une énumération des intervalles ouverts à extrémités rationnelles. Le lemme précédent permet de construire $M_1,N_1,M_2,N_2,\ldots$ des fermés, d'intérieur vide, de mesure $>0$ et deux à deux disjoints tels que $M_k,N_k\subset I_k$. Montrons que $M:=\cup_k M_k$ est un borélien qui convient.\newline
+ Soit $I$ un intervalle de $\mathbb R$ non réduit à un point. On dispose de $k$ tel que $I_k\subset I$.\newline
+ $\begin{aligned}[t]0<m(M_k) = m(M_k\cap I_k)&\leq m(M\cap I_k)\\
+ &\leq m(M\cap I)\\
+ &< m(M\cap I) + M(N_k) \\
+ &= m((M\cap I)\cup N_k) \quad \text{car disjoints}\\
+ &\leq m(I) \quad \text{car inclus dans I}\end{aligned}$\newline
+ Conclusion: $0<m(M\cap I)<m(I)$
 
 
 
