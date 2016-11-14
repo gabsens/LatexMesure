@@ -53,14 +53,17 @@ Solution: Non. $X=\mathbb N$, $\mathcal A_n=\sigma(\{\{0\}, \ldots, \{n\}\})$. P
 Solution: Non. $X=\mathbb N$, $\mathcal M_i = \{\{1\}, \{1,2\}, \ldots, \{1,2,\ldots, i\}\}$ et $A_i=\{1,2,\ldots, i\}$
 
 \subsection{}  \fbox{
-\parbox{0.9\textwidth}{ Image réciproque d'une tribu est une tribu}}
+\parbox{0.9\textwidth}{ Image réciproque d'une tribu est une tribu.
+}}
 
 \subsection{}  \fbox{
 \parbox{0.9\textwidth}{Soit $\mathcal A$ une tribu sur $X$ telle que si $A\in \mathcal A \setminus \{\emptyset\}$, il existe $B,C\in \mathcal A$ non vides avec $B\cap C = \emptyset$ et $B\cup C  =A$. Montrer que $\mathcal A$ n'est pas dénombrable.}}\\
 
 Solution: On construit une suite $(C_n)$ d'éléments de $\mathcal A$ deux à deux disjoints: par hypothèse, $X = B_1\cup C_1$, $B_1=B_2\cup C_2$, $B_2=B_3\cup C_3$, ... On considère ensuite l'application $\mathcal P( \mathbb N) \to \mathcal A$, $J \mapsto \bigcup_{j\in J} C_j$. Elle est injective et $\mathcal P( \mathbb N) \sim \mathbb R$, donc $\mathcal A$ n'est pas dénombrable.
 
-\subsection{} Sans difficulté
+\subsection{} \fbox{
+\parbox{0.9\textwidth}{ Anecdotique.
+}}
 
 \subsection{}  \fbox{
 \parbox{0.9\textwidth}{($\bigstar$) Montrer qu'une tribu $\mathcal A$ sur $X$ est soit finie, soit non-dénombrable.}}\\
@@ -75,7 +78,7 @@ $$\begin{array}{clcl}
   \varphi : &\mathcal{P}(\Gamma) &\longrightarrow  &\mathcal A\\
       &\mathcal C        &\longmapsto      & \bigcup_{\gamma \in \mathcal C} \gamma \\
 \end{array}$$
-
+$\mathcal A$ étant dénombrable, $\Gamma\subset \mathcal A$ l'est aussi, et l'union précédente est dénombrable.
 Montrons que $\varphi$ est bijective: \newline
 - \underline {inj}: Soient $\mathcal C \neq \mathcal C'$ des éléments de $\mathcal P(\Gamma)$. Sans perte de généralité on dispose de $\gamma \in \mathcal C \setminus \mathcal C'$. Considérons $x\in \gamma$. Alors $x\in \varphi(\mathcal C)$. Comme les classes sont disjointes, $\forall \gamma' \in \mathcal C', x\notin \gamma'$ donc $x\notin \varphi(\mathcal C')$. Donc $\varphi(\mathcal C) \neq \varphi(\mathcal C')$ \newline
 - \underline {surj}: On démontre sans mal que, pour $A\in \mathcal A$, $\displaystyle A=\bigcup_{x\in A} \dot x$ \newline
@@ -84,7 +87,9 @@ $\bullet$ $\Gamma$ est fini. Alors $\mathcal A\sim \mathcal{P}(\Gamma)$ est fini
 $\bullet$ $\Gamma$ est au moins infini dénombrable. $\mathcal A$ a au moins le cardinal de $\mathbb R$ donc non dénombrable. \newline
 \underline{Note}: comme dans l'exercice 2.6 on fabrique une famille infinie d'éléments disjoints de la tribu et on fait exploser la tribu avec les unions de ces éléments.
 
-\subsection{} Sans difficulté
+\subsection{} \fbox{
+\parbox{0.9\textwidth}{ Indicatrices de $\liminf$ et $\limsup$.
+}}
 
 \subsection{} \fbox{
 \parbox{0.9\textwidth}{(Kortchemski) Soit $(E,\mathcal A)$ un espace mesurable, $\mathcal C$ une famille de parties de $E$ et $B\in \sigma(\mathcal C)$. Montrer qu'il existe une famille dénombrable $\mathcal D\subset \mathcal C$ telle que $B\in \sigma(\mathcal D)$}}\\
@@ -111,10 +116,10 @@ Montrer que si $\mathcal C$ est un $\pi$-système, $\sigma(\mathcal C) = \lambda
 Solution: On note $\displaystyle \mathcal D = \bigcap_{\mathcal M\subset \mathcal P(X), \mathcal M\text{ $\lambda$-système contenant $\mathcal C$}} \mathcal M$. \newline Une intersection quelconque de $\lambda$-systèmes étant un $\lambda$-système, $\mathcal D$ est un $\lambda$-système.\newline
 Montrons $\sigma(\mathcal C) = \mathcal D$.\newline
 \fbox{$\subset$} Il suffit de prouver que $\mathcal D$ est une tribu qui contient $\mathcal C$.\newline
-$\bullet$ $\mathcal C \subset \mathcal D$   \quad OK.
-\newline $\bullet$ $X\in \mathcal D$ car $\mathcal D$ $\lambda$-système.
-\newline $\bullet$ Soit $A\in \mathcal D$. Montrons que $A^c\in \mathcal D$.\newline
-Soit $\mathcal A$ un $\lambda$-système contenant $\mathcal C$. Comme $A\in \mathcal A$ et $X\in \mathcal A$ donc $X\setminus A = A^c\in \mathcal A$. D'où $A^c\in \mathcal D$.\newline
+$\bullet$ $\mathcal C \subset \mathcal D$   \quad OK.\newline 
+$\bullet$ $X\in \mathcal D$ car $\mathcal D$ $\lambda$-système.\newline 
+$\bullet$ Soit $A\in \mathcal D$. Montrons que $A^c\in \mathcal D$.\newline
+Soit $\mathcal A$ un $\lambda$-système contenant $\mathcal C$. Comme $A\in \mathcal A$ et $X\in \mathcal A$, $X\setminus A = A^c\in \mathcal A$. D'où $A^c\in \mathcal D$.\newline
 $\bullet$ Soit $(A_i)$ une suite d'éléments de $\mathcal D$. Montrons que $\cup_i A_i\in \mathcal D$. Comme $\mathcal D$ est stable par union croissante et passage au complémentaire,  il suffit de prouver que $\mathcal D$ est stable par intersection finie.\newline \newline Pour $A\in \mathcal D$ on définit $\mathcal E_A = \{B\in \mathcal D | A\cap B \in \mathcal D\}$.\newline
 Soit $A\in \mathcal C$. \newline
 $\heartsuit$ Comme $\mathcal C$ est un $\pi$-système et $\mathcal C \subset \mathcal D$, on a $\mathcal C \subset \mathcal E_A$. \newline
@@ -133,7 +138,8 @@ Finalement, $\mathcal D$ est une tribu contenant $\mathcal C$, donc $\sigma(\mat
 \subsection{} \fbox{
 \parbox{0.9\textwidth}{Soit $(X,\mathcal A)$ un espace mesurable et $\mu:\mathcal A \to \mathbb R^+$ finiment additive, telle que $\mu(\emptyset)=0$ et $\mu(B)<\infty$ pour un $B\neq \emptyset$. On suppose que pour toute suite croissante $(A_i)\in \mathcal A$, $\mu(\cup_i A_i) = \lim_i \mu(A_i)$. Montrer que $\mu$ est une mesure.}} \\
 
-Solution: Soit $(A_i)\in \mathcal A$ disjoints. La suite $\displaystyle B_n:=\left( \bigcup_{i=1}^n A_i\right)_n$ est croissante et \newline$\mu(\cup_n A_n) = \mu(\cup_n B_n)=\lim_n \mu(B_n)=\lim_n \sum_{i=1}^n \mu(A_i) = \sum_{i=1}^{\infty} \mu(A_i)$
+Solution: Soit $(A_i)\in \mathcal A$ disjoints. La suite $\displaystyle B_n:=\left( \bigcup_{i=1}^n A_i\right)_n$ est croissante et \newline
+\centerline{$\mu(\cup_n A_n) = \mu(\cup_n B_n)=\lim_n \mu(B_n)=\lim_n \sum_{i=1}^n \mu(A_i) = \sum_{i=1}^{\infty} \mu(A_i)$}
 
 \subsection{} \fbox{
 \parbox{0.9\textwidth}{Soit $(X,\mathcal A)$ un espace mesurable et $\mu:\mathcal A \to \mathbb R^+$ finiment additive, telle que $\mu(\emptyset)=0$ et $\mu(X)<\infty$. On suppose que pour toute suite $(A_n)\in \mathcal A$ qui décroît vers $\emptyset$ on a $\lim_i \mu(A_i) = 0$. Montrer que $\mu$ est une mesure.}} \\
@@ -164,11 +170,12 @@ Soit $\mu_1,\mu_2,\ldots,$ une suite de mesures sur $(X,\mathcal A)$ telles que 
 
 Solution: Oui dans les deux cas. Dans les deux cas, \newline $\bullet$ $\mu$ est finiment additive: si $A$ et $B$ éléments disjoints de $\mathcal A$, $\mu(A\cup B) = \lim_{n\to \infty} \mu_n(A\cup B) =  \lim_{n\to \infty} (\mu_n(A)+\mu_n(B)) =\mu(A) + \mu(B)$\newline
 $\bullet$ $\mu$ est croissante: si $A\subset B$ sont des éléments de $\mathcal A$, comme $B=A\sqcup B\setminus A$, $\mu(B) = \lim_n \mu_n(B)  = \lim_n \mu_n(A\sqcup B\setminus A) = \lim_n (\mu_n(A)+ \mu_n(B\setminus A)) = \mu(A)+\mu(B\setminus A) \geq \mu(A)$. \newline \newline
-Dans le premier cas, on a pour $n\in \mathbb N$, $\sum_{i=1}^n\mu(A_i) = \mu( \cup_{i=1}^n A_i) \leq \mu( \cup_{i=1}^\infty A_i)$. \newline Donc $\sum_{i=1}^\infty \mu(A_i) \leq \mu( \cup_{i=1}^\infty A_i)$. \newline
+Soit $(A_i)$ une suite d'éléments disjoints de $\mathcal A$. \newline 
+Dans le cas croissant, on a pour $n\in \mathbb N$, $\sum_{i=1}^n\mu(A_i) = \mu( \cup_{i=1}^n A_i) \leq \mu( \cup_{i=1}^\infty A_i)$. \newline Donc $\sum_{i=1}^\infty \mu(A_i) \leq \mu( \cup_{i=1}^\infty A_i)$. \newline
 Dans l'autre direction, pour tout $\epsilon >0$, on dispose de $N\in \mathbb N$ tel que $$n\geq  N \implies \mu_n(\cup_{i=1}^\infty A_i)\geq \mu(\cup_{i=1}^\infty A_i)-\epsilon \implies \sum_{i=1}^\infty \mu_n(A_i)\geq \mu(\cup_{i=1}^\infty A_i)-\epsilon$$
 Par croissance des $\mu_i$ on a $\sum_{i=1}^\infty \mu(A_i) \geq \sum_{i=1}^\infty \mu_n(A_i) \geq \mu(\cup_{i=1}^\infty A_i)-\epsilon$. \newline
 Donc pour tout $\epsilon >0$, $\sum_{i=1}^\infty \mu(A_i) \geq \mu(\cup_{i=1}^\infty A_i)-\epsilon$, d'où l'inégalité voulue. \newline \newline
-Dans le deuxième cas, on a encore $\sum_{i=1}^\infty \mu(A_i) \leq \mu( \cup_{i=1}^\infty A_i)$. \newline Pour $n, N \in \mathbb N$, on a $$\begin{aligned} \mu(\cup_{i=1}^\infty A_i) &\leq \mu_n(\cup_{i=1}^\infty A_i)  = \sum_{i=1}^\infty \mu_n(A_i)\\ &=\sum_{i=1}^N \mu_n(A_i)  + \sum_{i=N+1}^\infty \mu_n(A_i)\\ &\leq \sum_{i=1}^N \mu_n(A_i)  + \sum_{i=N+1}^\infty \mu_1(A_i) \end{aligned}$$
+Dans le cas décroissant, on a encore $\sum_{i=1}^\infty \mu(A_i) \leq \mu( \cup_{i=1}^\infty A_i)$. \newline Pour $n, N \in \mathbb N$, on a $$\begin{aligned} \mu(\cup_{i=1}^\infty A_i) &\leq \mu_n(\cup_{i=1}^\infty A_i)  = \sum_{i=1}^\infty \mu_n(A_i)\\ &=\sum_{i=1}^N \mu_n(A_i)  + \sum_{i=N+1}^\infty \mu_n(A_i)\\ &\leq \sum_{i=1}^N \mu_n(A_i)  + \sum_{i=N+1}^\infty \mu_1(A_i) \end{aligned}$$
 En passant à la limite sur $n$ dans l'inégalité on obtient $$\mu(\cup_{i=1}^\infty A_i) \leq \sum_{i=1}^N \mu(A_i)  + \sum_{i=N+1}^\infty \mu_1(A_i) $$
 Comme $\displaystyle \sum_{i=1}^\infty \mu_1(A_i)  = \mu_1(\cup_{i=1}^\infty A_i) <\infty$, $\displaystyle \lim_{N\to \infty}  \sum_{i=N+1}^\infty \mu_1(A_i) =0$\newline
 En passant à la limite sur $N$, on obtient $$\mu(\cup_{i=1}^\infty A_i) \leq \sum_{i=1}^\infty \mu(A_i)$$
@@ -176,7 +183,7 @@ En passant à la limite sur $N$, on obtient $$\mu(\cup_{i=1}^\infty A_i) \leq \s
 \subsection{}\fbox{
 \parbox{0.9\textwidth}{
 Soit $(X,\mathcal A, \mu)$ un espace mesuré, $\mathcal N$ l'ensemble des négligeables pour $\mu$ et $\mathcal B = \sigma(\mathcal A \cup \mathcal N)$. Montrer que $\mathcal B = \{A\cup N| A\in \mathcal A, N\in \mathcal N\}$.\newline
-Pour $B=A\cup N$, on définit $\overline \mu(B) = \mu(A) $. Montrer que $\overline \mu$ est bien définie, que c'est une mesure sur $\mathcal B$, que $(X,\mathcal B, \overline \mu)$ est complet, et que c'est la complétion minimale de $(X,\mathcal A, \mu)$.
+Pour $B=A\cup N$, on définit $\overline \mu(B) = \mu(A) $. Montrer que $\overline \mu$ est bien définie, que c'est une mesure sur $\mathcal B$, que $(X,\mathcal B, \overline \mu)$ est complet, que c'est la complétion minimale de $(X,\mathcal A, \mu)$ et que $\overline \mu$ est l'unique prolongement de $\mu$ à $\mathcal B$.
 }}\\ \\
 
 Solution: Posons $\mathcal C = \{A\cup N| A\in \mathcal A, N\in \mathcal N\}$.  Montrons $\mathcal B = \mathcal C$.\newline
@@ -191,32 +198,22 @@ $\cup_i B_i = (\cup_i A_i) \cup (\cup_i N_i) $ avec $\cup_i N_i \subset \cup_i C
 Soit $B\in\mathcal B$, $B=A\cup N=A' \cup N'$ où $A,A'\in \mathcal A$, $N,N'\in\mathcal N$. Montrons que $\mu(A)=\mu(A')$.\newline On dispose de $C,C'\in \mathcal A$ de mesure nulle avec $N\subset C$ et $N'\subset C'$. Comme $A\subset A\cup N = A'\cup N'\subset A'\cup C'$ et $\mu(A'\cup C')\leq \mu(A')+\mu(C') = \mu(A')$, on a $\mu(A)\leq \mu(A')$. Par symétrie, $\mu(A')\leq \mu(A)$. Donc $\overline \mu$ est bien définie.\newline \newline
 On vérifie sans peine que $\overline \mu$ est une mesure sur $\mathcal B$.\newline
 Montrons que $(X,\mathcal B, \overline \mu)$ est complet. Soit $D$ un négligeable de $(X,\mathcal B, \overline \mu)$. On dispose de $A, C\in \mathcal A$ et $N\in \mathcal N$ tel que $D\subset A\cup N$, $N\subset C$ et $\mu(A)=\mu(C)=0$. Alors $D\subset A\cup C$ qui est dans $\mathcal A$ et de mesure nulle. Donc $D\in \mathcal N$. D'où $D\in \mathcal B$.\newline \newline
-Montrons que $(X,\mathcal B, \overline \mu)$ est la complétion minimale de $(X,\mathcal A,\mu) $. Clairement $\mathcal A\subset \mathcal B$ et $\overline \mu$ prolonge $\mu$. Si $(X,\mathcal B', \overline \mu')$ est une complétion de $(X,\mathcal A,\mu) $, $\mathcal B'$ est une tribu qui contient $\mathcal A$ et $\mathcal N$, donc $\mathcal B = \sigma(\mathcal A\cup \mathcal N)\subset \mathcal B'$.
+Montrons que $(X,\mathcal B, \overline \mu)$ est la complétion minimale de $(X,\mathcal A,\mu) $. Clairement $\mathcal A\subset \mathcal B$ et $\overline \mu$ prolonge $\mu$. Si $(X,\mathcal B', \overline \mu')$ est une complétion de $(X,\mathcal A,\mu) $, $\mathcal B'$ est une tribu qui contient $\mathcal A$ et $\mathcal N$, donc $\mathcal B = \sigma(\mathcal A\cup \mathcal N)\subset \mathcal B'$.\newline \newline
+Montrons que $\overline \mu$ est l'unique prolongement de $\mu$ à $\mathcal B$. Soit $\nu$ une mesure sur $(X,\mathcal B)$ qui coincide avec $\mu$ sur $\mathcal A$. Soit $B\in \mathcal B$, $B=A\cup N$ avec $N\subset C$. On a $\nu(A\cup N) = \nu(A)+\nu(N\setminus A)$ et $\nu(N\setminus A) \leq \nu(C) = 0$, donc $$\nu(B) = \nu(A) = \mu(A) = \overline \mu(A) = \overline \mu(B)$$
 
 
 \subsection{} \fbox{
 \parbox{0.9\textwidth}{Sur $(\mathbb R, \mathcal B(\mathbb R))$ on considère deux mesures $m$ et $n$ telles que \newline $\forall a,b\in \mathbb R, a<b \implies m((a,b)) = n((a,b))$. Montrer que $m=n$.}}\\ \\
 
-Solution:  Soit $\mathcal C = \{(a,b), -\infty <a<b<\infty \}$ et pour $k\geq 1$, \newline $E_k = (-k,k)$ et $\mathcal D_k = \{A\in \mathcal B, m(A\cap E_k) =  n(A\cap E_k)\}$. \newline
-Montrons que $\mathcal D_k$ est un $\lambda$-système contenant $\mathcal C$. \newline \newline
-$\bullet$ $m(\mathbb R\cap E_k) = m(E_k)=m((-k,k))=n((-k,k))=n(\mathbb R\cap E_k)$ donc $\mathbb R\in \mathcal D_k$\newline
- $\bullet$ Soient $A,B\in \mathcal D_k$ tels que $A\subset B$. Noter que $E_k\cap (B\setminus A) = (E_k\cap B)\setminus (E_k\cap A)$ et $(E_k\cap B)$ et $(E_k\cap A)$ sont de mesure finie (pour $m$ et $n$). Donc $$\begin{aligned}m(E_k\cap (B\setminus A)) &= m(E_k\cap B)-m(E_k\cap A)\\&=n(E_k\cap B)-n(E_k\cap A)\\&=n(E_k\cap (B\setminus A))\end{aligned}$$\newline
-D'où $B\setminus A\in \mathcal D_k$\newline
-$\bullet$ Si $(A_i)$ est une suite croissante de $\mathcal D_k$, $$\begin{aligned}m(E_k\cap (\cup_i A_i)) &= m(\cup_i(E_k\cap A_i))\\&= \lim_im(E_k\cap A_i)\\ &=\lim_i n(E_k\cap A_i)\\ &=n(E_k\cap (\cup_i A_i))  \end{aligned}$$\newline
-Donc $\cup_i A_i \in \mathcal D_k$\newline
-$\bullet$ $\mathcal C \subset \mathcal D_k$ car $\mathcal C$ est stable par intersection finie.\\
+Solution:  C'est une conséquence immédiate du lemme d'égalité des mesures démontré dans l'exercice 3.11.
 
-Le théorème $\pi-\lambda$ implique $\sigma(\mathcal C)\subset \mathcal D_k$ i.e $\mathcal B\subset \mathcal D_k$. Donc pour tout $A\in \mathcal B$, $m(A\cap E_k) = n(A\cap E_k)$.
-
-Pour finir, étant donné $A\in \mathcal B$, $$\begin{aligned} m(A)&=m(\cup_i (A\cap E_i))\\ &= \lim_i m(A\cap E_i) \\ &= \lim_i n(A\cap E_i) \\&= n(A) \end{aligned}$$
-
-\newpage
 
 \subsection{} \fbox{
 \parbox{0.9\textwidth}{ Soit $(X,\mathcal A)$ mesurable et $\mathcal C\subset \mathcal A$. Soient $m$ et $n$ deux mesures $\sigma$-finies sur $(X,\mathcal A)$ qui coincident sur $\mathcal C$. Les mesures coincident-elles sur $\sigma(\mathcal C)$ ? Qu'en est-il si $m$ et $n$ sont finies ?
 }}\\ \\
 
 Solution: Non dans les deux cas. $X=\{1,2\}$, $\mathcal{C}=\{\{1\}\}$ et $m,n$ définies sur $\sigma(\mathcal{C})$ par $m(\{1\})=m(\{2\})=n(\{1\})=1$ and $n(\{2\})=2$
+\newpage 
 
 \subsection{} \fbox{
 \parbox{0.9\textwidth}{\textbf{Lemme d'égalité des mesures} \newline
