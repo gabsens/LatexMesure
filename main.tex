@@ -417,7 +417,68 @@ Solution: Comme $m(A) = \lim_n m(A\cap [-n,n])$, on dispose de $N$ tel que $m(A\
 D'autre part, $\cup_{q\in \mathbb Q\cap [-2N,2N]}(B+q) \subset [-3N,3N]$, donc $\sum_{q\in \mathbb Q\cap [-2N,2N]}m(B) \leq 6N$, d'où $m(B)=0$.\newline
 Absurde.
 
+\newpage 
+\subsection{} \fbox{
+\parbox{0.9\textwidth}{
+Soit $X$ un ensemble, $\mathcal A$ une algèbre sur $X$ et $\ell$ une prémesure telle que $\ell(X)<\infty$. soit $\mu^*$ la mesure extérieure associée à $(\mathcal A, \ell)$. Montrer qu'une partie $A$ est mesurable si et seulement si $\mu^*(A)+\mu^*(A^c) = \ell(X)$
+}}\\ \\
 
+Solution:\newline
+\fbox{$\Rightarrow$} Définition de $\mu^*$-mesurable et concordance de $\mu^*$ avec $\ell$ (propriété spécifique aux algèbres).\newline
+\fbox{$\Leftarrow$}  Soit $A$ tel que $\mu^*(A)+\mu^*(A^c) = \ell(X)$. \newline
+Soit $E\subset X$. On suppose dans un premier temps $E$  $\mu^*$-mesurable. Il suffit de montrer que  $\mu^*(A\cap E) + \mu^*(A^c\cap E) \leq \mu^*(E)$.\newline
+Comme $E$ est mesurable, $\begin{aligned}[t] \mu^*(A) &= \mu^*(A\cap E)+\mu^*(A\cap E^c) \\ 
+\mu^*(A^c) &= \mu^*(A^c\cap E)+\mu^*(A^c\cap E^c)\end{aligned}$\newline \newline
+et en sommant $\begin{aligned}[t]\ell(X)=\mu^*(A)+\mu^*(A^c) &= \mu^*(A\cap E)+\mu^*(A^c\cap E)+\mu^*(A\cap E^c)+\mu^*(A^c\cap E^c) \\
+&\geq \mu^*(E) + \mu^*(E^c) \quad \text{$\sigma$-sous-additivité de $\mu^*$} \\
+&\geq \mu^*(X) \quad \text{$\sigma$-sous-additivité de $\mu^*$} \\
+&= \ell(X) \quad \text{$\mu^*$ et $\ell$ coincident sur $\mathcal A$} \end{aligned} $\newline \newline
+Les inégalités sont donc des égalités, donc  $\mu^*(A\cap E) + \mu^*(A^c\cap E) = \mu^*(E)$.\newline 
+\newline
+Revenons au cas général: soit $E\subset X$.  Soit $\epsilon >0$. On dispose de $(B_i)$ une suite d'éléments de $\mathcal A$ telle que $E\subset \cup_i B_i$ et $\sum_i \ell(B_i)\leq \mu^*(E) + \epsilon$. \newline Les $B_i$ étant dans $\mathcal A$, ils sont $\mu^*$-mesurables (résultat prouvé dans le cours et spécifique aux algèbres), donc $\cup_i B_i^$ est $\mu^*$-mesurable, avec \newline 
+\centerline{$\mu^*(\cup_i B_i)\leq \sum_i \mu^*(B_i) = \sum_i \ell (B_i) \leq \mu^*(E)+\epsilon$ } \newline
+On a $$\begin{aligned}[t]\mu^*(A\cap E) + \mu^*(A^c\cap E) &\leq \mu^*(A\cap (\cup_i B_i)) + \mu^*(A^c\cap (\cup_i B_i)) \\
+&= \mu^*(\cup_i B_i) \quad \text{ car $\cup_i B_i$ mesurable} \\
+&\leq \mu^*(E)+\epsilon\end{aligned}
+$$
+Ceci est vrai pour tout $\epsilon$ et on a l'inégalité recherchée.
+\newpage 
 
+\subsection{} \fbox{
+\parbox{0.9\textwidth}{
+(1) Donner un exemple de mesure extérieure finie sur $X$ qui n'est pas continue par union croissante et intersection décroissante.\newline
+(2) Soit $(X,\mathcal A,\mu)$ un espace mesuré avec $\mu$ finie. Soit $\mu^*$ la mesure extérieure définie en 4.3. Montrer que $\mu^*$ est continue par union croissante.
+}} \\ \\
+
+Solution: (1) Sur $X = \mathbb R$, on définit $\mu^*(A) = 0$ si $A$ est dénombrable, $\mu^*(A) = 1$ si $A$ et $A^c$ ne sont pas dénombrables et $\mu^*(A) = 2$ si $A$ n'est pas dénombrable et $A^c$ est dénombrable. \newline 
+On considère la suite croissante $A_n=[-n,n]$ et la suite décroissante $B_n = (n,\infty)$. \newline
+(2) Soit $A_n$ une suite croissante. Montrons que $\mu^*(\cup_k A_k) = \lim_n \mu^*(A_n)$. \newline
+\fbox{$\geq$} Pour tout $n$, $A_n\subset \cup_k A_k$, donc $\mu^*(A_n) \leq \mu^*(\cup_k A_k)$ et  $\lim_n\mu^*(A_n) \leq \mu^*(\cup_k A_k)$.\newline
+\fbox{$\leq$} Pour tout $n$, on dispose de $B_n\in \mathcal A$ tel que $A_n\subset B_n$ et  $\mu^*(A_n)+\epsilon/2^n \geq \mu(B_n)$. Considérons $C_n = \cap_{i=n}^\infty B_i$. La croissance des $A_i$ et la définition de $B_i$ impliquent $A_n\subset C_n \subset B_n$, avec d'autre part $(C_n)$ croissante et dans $\mathcal A$.\newline
+L'exercice 4.3 montre que $\mu^*$ et $\mu$ coincident sur $\mathcal A$. D'où $$\mu^*(A_n) \leq \mu^*(C_n) = \mu(C_n) \leq \mu(B_n) \leq \mu^*(A_n)+\epsilon/2^n$$
+Donc $(\mu(C_n))$ converge vers la même limite que $\mu^*(A_n)$. \newline
+D'autre part $\cup_n A_n\subset \cup_n C_n$ et la continuité croissante de $\mu$ donne 
+$$\mu^*(\cup_n A_n)\leq \mu^*(\cup_n C_n)=\mu(\cup_n C_n) = \lim_n \mu(C_n) = \lim_n \mu^*(A_n)$$
+
+\subsection{} \fbox{
+\parbox{0.9\textwidth}{
+Soit $A$ un Lebesgue-mesurable et $B=\cup_{x\in A}[x-1,x+1]$.\newline
+Montrer que $B$ est un Lebesgue-mesurable.
+}}\\ \\
+
+Solution: Il suffit de remarquer $$\begin{aligned}[t]
+B &= \left(\cup_{x\in A}(x-1,x+1)\right) \cup  \left(\cup_{x\in A}\{x-1\}\right) \cup  \left(\cup_{x\in A}\{x+1\}\right)\\
+&= \underbrace{\left(\cup_{x\in A}(x-1,x+1)\right)}_{\text{ouvert de $\mathbb R$}} \cup \quad A-1 \quad \cup \quad A+1 \end{aligned}$$
+
+$B$ est l'union de trois Lebesgue-mesurables, donc Lebesgue-mesurable. \newpage
+
+\subsection{} \fbox{
+\parbox{0.9\textwidth}{
+Soit $m$ la mesure de Lebesgue et $A$ un Lebesgue-mesurable de mesure nulle. Montrer qu'il existe $c\in \mathbb R$ tel que $A\cap (c+\mathbb Q) = \emptyset$.
+}}\\\\
+
+Solution: On a $m(A-\mathbb Q)=0$. En effet, $$m(A-\mathbb Q)=m(\cup_{q\in\mathbb Q}(A-q))\leq \sum_{q\in \mathbb Q}m(A-q) = \sum_{q\in \mathbb Q}m(A)=0 $$
+
+Alors n'importe quel $c\notin A-\mathbb Q$ convient.
 
 \end{document}
