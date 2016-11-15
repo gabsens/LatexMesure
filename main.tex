@@ -238,7 +238,7 @@ Donc $\mu(A) =\lim_i \mu(A\cap E_i)=\lim_i \mu_i(A)=\lim_i \nu_i(A) = \nu(A)$.
 \parbox{0.9\textwidth}{ Soit $\mu$ une mesure sur $\mathcal B(\mathbb R)$ finie sur tout compact de $\mathbb R$. On définit $\alpha(x) = \mu((0,x])$ si $x\geq 0$ et $\alpha(x) = -\mu((x,0])$ si $x< 0$. Montrer que $\mu$ est la mesure de Lebesgue-Stieltjes correspondant à $\alpha$.
 }}\\ \\
 
-Solution: Soit $\nu$ la mesure de L-S associée à $\alpha$. \newline $\bullet$ Par disjonction de cas et en utilisant le fait qu'une mesure extérieure $\mu^*$ coincide avec $l$ sur $\mathcal C$,  on montre que $\mu$ et $\nu$ coincident sur les $(a,b]$ (qui forment un $\pi$-système). \newline $\bullet$ De plus, comme $\mathbb R = \cup_n (-n,n]$, on a $\nu(\mathbb R) \leq \sum_i (\alpha(i)-\alpha(-i)) = \sum_i \mu((-i,i])\leq \mu(\mathbb R)$. \newline $\bullet$ Soit $A_i = (a_i,b_i]$ tel que $\cup_i A_i = \mathbb R$. On montre par disjonction de cas que $\alpha(b_i)-\alpha(a_i)=  \mu((a_i,b_i])$. D'où $\sum_i (\alpha(b_i)-\alpha(a_i)) = \sum_i \mu((a_i,b_i]) \geq \mu(\cup_i(a_i,b_i]) = \mu(\mathbb R)$. En passant à l'inf, on a $\nu(\mathbb R)\geq \mu(\mathbb R)$. \newline Donc $\nu(\mathbb R)= \mu(\mathbb R)$ \newline $\bullet$ D'autre part, $\mathbb R = \cup_n (-n,n]$ avec $\mu((-n,n])< \infty $. \newline \newline
+Solution: Soit $\nu$ la mesure de L-S associée à $\alpha$. \newline $\bullet$ Par disjonction de cas et en utilisant le fait que la mesure de L-S coincide avec $l$ sur les $(a,b]$,  on montre que $\mu$ et $\nu$ coincident sur les $(a,b]$ (qui forment un $\pi$-système). \newline $\bullet$ De plus, comme $\mathbb R = \cup_n (-n,n]$, on a $\nu(\mathbb R) \leq \sum_i (\alpha(i)-\alpha(-i)) = \sum_i \mu((-i,i])\leq \mu(\mathbb R)$. \newline $\bullet$ Soit $A_i = (a_i,b_i]$ tel que $\cup_i A_i = \mathbb R$. On montre par disjonction de cas que $\alpha(b_i)-\alpha(a_i)=  \mu((a_i,b_i])$. D'où $\sum_i (\alpha(b_i)-\alpha(a_i)) = \sum_i \mu((a_i,b_i]) \geq \mu(\cup_i(a_i,b_i]) = \mu(\mathbb R)$. En passant à l'inf, on a $\nu(\mathbb R)\geq \mu(\mathbb R)$. \newline Donc $\nu(\mathbb R)= \mu(\mathbb R)$ \newline $\bullet$ D'autre part, $\mathbb R = \cup_n (-n,n]$ avec $\mu((-n,n])< \infty $. \newline \newline
 Toutes les conditions sont réunies pour utiliser le lemme d'égalité des mesures: on a $\mu = \nu$ sur $\mathcal B(\mathbb R)$.
 
 \subsection{} \fbox{
@@ -256,7 +256,7 @@ Donc $m(A'\setminus ([-N,N]\setminus G')) \leq \epsilon/2$. En posant $F = [-N,N
  \fbox{
 \parbox{0.9\textwidth}{  \textbf{Extension du résultat précédent \underline{\smash{sans l'hypothèse $\mathbf{m(A)<\infty}$}}} Soit $m$ la mesure de Lebesgue et $A$ un Lebesgue mesurable.\newline  Soit $\epsilon>0$. Montrer qu'il existe $F$ fermé et $G$ ouvert tels que $F\subset A \subset G$ et $m(G\setminus F)<\epsilon$.
 }}\\\\
-Solution: Posons $A_n = E\cap [-n,n]$. Chaque $A_n$ étant de mesure finie, on dispose, d'après ce qui précède de $G_n$ ouvert tel que $A_n\subset G_n$ et $m(G_n\setminus A_n)\leq \epsilon/2^n$. Posons $G=\cup_n G_n$. Comme $E=\cup_n A_n$, $\begin{aligned}[t] m(G\setminus E) &= m(\cup_n G_n \setminus \left(\cup_k A_k \right)) \\ 
+Solution: Posons $A_n = A\cap [-n,n]$. Chaque $A_n$ étant de mesure finie, on dispose, d'après ce qui précède de $G_n$ ouvert tel que $A_n\subset G_n$ et $m(G_n\setminus A_n)\leq \epsilon/2^n$. Posons $G=\cup_n G_n$. Comme $A=\cup_n A_n$, $\begin{aligned}[t] m(G\setminus A) &= m(\cup_n G_n \setminus \left(\cup_k A_k \right)) \\ 
 &= m(\cup_n \left( G_n \cap \cap_k A_k^c \right)) \\ &\leq m(\cup_n \left( G_n \cap A_n^c \right)) \\ &\leq \sum_n m(G_n \setminus A_n)\\ &\leq \epsilon \end{aligned}$ \newline
 $G$ est donc un ouvert qui convient.
  \newline \newline
@@ -294,7 +294,24 @@ Solution: On a $\begin{aligned}[t] m(\{x\}) &= m(\cap_n (x-\frac 1n , x])\\
 \parbox{0.9\textwidth}{ Soit $m$ la mesure de Lebesgue, $c\in\mathbb R$ et $A$ un Lebesgue-mesurable. Montrer que $m(A+c) = m(A)$ et $m(cA) = |c|m(A)$.
 }}\\ \\
 
-Solution: La démonstration ne pose pas de problème. Penser à étudier l'effet de $x\mapsto \frac x c$ sur $(a_i,b_i]$ selon le signe de $c$.\\
+Solution: La démonstration ne pose pas de problème. Penser à étudier l'effet de $x\mapsto \frac x c$ sur $(a_i,b_i]$ selon le signe de $c$.\newline \newline
+\fbox{
+\parbox{0.9\textwidth}{ \textbf{Complément}\newline
+Soit $\mu^*$ la prémesure de Lebesgue.\newline
+(1) Soit $A\subset \mathbb R$ quelconque et $x\in \mathbb R$. Alors $\mu^*(A+x) = \mu^*(A)$.\newline
+(2) Soit $A$ Lebesgue-mesurable et $x\in \mathbb R$. Alors $A+x$ est Lebesgue-mesurable.
+}}\\ \\
+(1) Soit $A_i=(a_i,b_i]$ tel que $A\subset \cup_i A_i$. Alors $A+x\subset \cup_i (a_i+x,b_i+x]$, donc $\mu^*(A+x)\leq \sum_i (b_i-a_i)$. En passant à l'inf, $\mu^*(A+x)\leq \mu^*(A)$.\newline
+De même $\mu^*(A)\leq \mu^*(A+x)$.\newline
+(2) Soit $E\subset X$. Montrons que $\mu^*((A+x)\cap E) + \mu^*((A+x)^c\cap E) \leq \mu^*(E)$.\newline
+D'après (1), $\mu^*((A+x)\cap E) = \mu^*(((A+x)\cap E)-x) = \mu^*(A\cap (E-x))$\newline
+On montre facilement en raisonnant par l'absurde dans les deux sens que\newline  
+$(A+x)^c-x = A^c$. \newline
+Donc $\mu^*((A+x)^c\cap E)-x) = \mu^*(A^c\cap (E-x))$. \newline
+D'où $\begin{aligned}[t] \mu^*((A+x)\cap E) + \mu^*((A+x)^c\cap E) &= \mu^*(A\cap (E-x)) +  \mu^*(A^c\cap (E-x)) \\
+&= \mu^*(E-x) \quad \text{car $A$ mesurable}\\
+&= \mu^*(E)  \end{aligned}$
+\\
 
 
 \subsection{} \fbox{
@@ -317,8 +334,8 @@ Solution: (1) $B$ est intersection dénombrable de Lebesgue-mesurables. \newline
 Soit $0<\epsilon<1$ et $m$ la mesure de Lebesgue. Exhiber un mesurable $E\subset [0,1]$ dont l'adhérence est $[0,1]$ et de mesure $\epsilon$.
 }}\\\\
 
-Solution: Montrons que $E=\left([0,\epsilon] \cap \mathbb Q^c \right) \cup \left( [0,1] \cap \mathbb Q\right)$ convient. \newline
-On a $\begin{aligned}[t] m(E) &= m([0,\epsilon] \cap \mathbb Q^c ) + m([0,1] \cap \mathbb Q) \\ &= m([0,\epsilon]) - m([0,\epsilon] \cap \mathbb Q) + \underbrace{0}_{\text{car $[0,1] \cap \mathbb Q$  dénombrable}} \\ &= \epsilon - 0 \quad \text{ pour la même raison}   \end{aligned}$
+Solution: Montrons que $E=[0,\epsilon]  \cup \left( [0,1] \cap \mathbb Q\right)$ convient. \newline
+On a $\begin{aligned}[t] m(E) &= m([0,\epsilon] ) + m([0,1] \cap \mathbb Q) - m([0,\epsilon]\cap [0,1] \cap \mathbb Q) \\ &= m([0,\epsilon])  \\ &= \epsilon    \end{aligned}$
 \newline \newline
 \underline{Note}: On prend un intervalle de longueur $\epsilon$ et on ajoute des poussières denses de mesure nulle.
 
@@ -338,10 +355,10 @@ $\mu$ est finie, $\mu(F^c)=0$ et si $G$ est un fermé tel que $\mu(G^c)=0$, alor
 \parbox{0.9\textwidth}{
 }}
 
-
+\newpage
 \subsection{} \fbox{
 \parbox{0.9\textwidth}{
-Soit $0<\epsilon<1$, $m$ le mesure de Lebesgue et $A$ un Lebesgue-mesurable. On suppose que pour tout intervalle $I$, on a $m(A\cap I) \leq (1-\epsilon) m(I)$. \newline
+Soit $0<\epsilon<1$, $m$ la mesure de Lebesgue et $A$ un Lebesgue-mesurable. On suppose que pour tout intervalle $I$, on a $m(A\cap I) \leq (1-\epsilon) m(I)$. \newline
 Montrer que $m(A)=0$.
 }}\\ \\
 
@@ -350,7 +367,8 @@ En faisant $\epsilon' \to 0$, on a $m(A) \leq (1-\epsilon)m(A)$, donc $m(A) = 0$
 Dans le cas général, on note que pour $J$ un intervalle borné et $I$  un intervalle quelconque, $m(A\cap J \cap I) \leq (1-\epsilon)m(J\cap I) \leq (1-\epsilon)m(I)$. \newline Le mesurable $A\cap J$ vérifie donc les conditions précédentes, d'où $m(A\cap J)=0$. \newline
 Finalement, $m(A) = m(\cup_n (A\cap (-n,n))\leq \sum_n m(A\cap (-n,n)) = \sum_n 0 = 0$ \newline \newline
 \underline{Note}: $\bullet$ La contraposée est intéressante: si $A$ est un Lebesgue-mesurable tel que $m(A)>0$, alors pour tout $0<\delta<1$, il existe un intervalle $I$ "de haute densité dans $A$", au sens où $\delta < \frac{m(A\cap I)}{m(I)}\leq 1$. \newline 
-$\bullet$ La preuve précédente montre qu'on peut en plus supposer $I$ ouvert des deux côtés.
+$\bullet$ La preuve précédente montre qu'on peut en plus supposer $I$ ouvert des deux côtés et borné.
+\newpage 
 
 \subsection{} \fbox{
 \parbox{0.9\textwidth}{ \textbf{Théorème de Steinhaus}\newline
@@ -376,13 +394,13 @@ Ceci est absurde dès que $\epsilon <\frac 13$.
 Soit $m$ la mesure de Lebesgue. Construire une borélien $A$ tel que \newline
 $0<m(A\cap I)<m(I)$ pour tout intervalle ouvert $I$ non réduit à un point.
 }}\\\\
-
 Solution: Démontrons d'abord le lemme suivant: \newline \newline
 \fbox{\parbox{0.9\textwidth}{ Soit $I$ un intervalle de $\mathbb R$ non réduit à un point. Alors pour tout \newline $0<\delta< m(I)$,
  $I$ contient un fermé d'intérieur vide de mesure $\delta$.
 }} \\ \\
 On s'inspire de la construction de l'ensemble de Cantor. \newline
 Etant donné un segment $J$ et $0<\alpha<1$, on dit qu'on enlève le $\alpha$-milieu de $J$ lorsqu'on considère $J\setminus (m- \frac{\alpha\ell(J)}2, m+ \frac{\alpha\ell(J)}2)$ où $m$ dénote le milieu de $J$. \newline
+(en clair on enlève le segment centré sur le milieu et de longueur $\alpha$ fois celle de $J$)\newline
 Soit $0<\delta < m(I)$. \newline
 Soit $0<\epsilon<\frac{m(I)}{\delta}-1$, de sorte que $\delta(1+\epsilon)<m(I)$. En partant d'un segment $K_0\subset I$ de mesure $\delta(1+\epsilon)$, et d'une suite $(\alpha_i)_{i\geq 1}$ de réels de $(0,1)$, on obtient un compact $K_1$ en enlevant le $\alpha_1$-milieu de $K_0$, puis $K_2$ en enlevant les $\alpha_2$-milieux des deux segments composant $K_1$ et ainsi de suite. Soit $K=\cap_n K_n$. On remarque que $m(K_n) = (1-\alpha_n)m(K_{n-1})$, donc $m(K_n) = m(K_0)\prod_{k=1}^n (1-\alpha_k)$. \newline
 $(K_n)$ étant décroissante, \newline 
@@ -401,10 +419,10 @@ Considérons une suite $(a_n)_{n\geq 1}$ de réels $>0$ telle que $\sum_{n=1}^\i
  Conclusion: $0<m(M\cap I)<m(I)$.
 
 \subsection{} \fbox{
-\parbox{0.9\textwidth}{ Soit $N$ l'ensemble non-mesurable de Vitali. Montrer que si $A\subset N$ est un Lebesgue-mesurable, alors $m(A)=0$
+\parbox{0.9\textwidth}{ Soit $N\subset [0,1]$ l'ensemble non-mesurable de Vitali. Montrer que si $A\subset N$ est un Lebesgue-mesurable, alors $m(A)=0$
 }}\\ \\
 
-Solution: Rappelons que $N$ contient pour chaque classe d'équivalence un unique représentant. Les éléments de $A$ sont donc les représentants de classes d'équivalence disjointes. Par conséquent, les $A+q$ sont disjoints lorsque $q\in \mathbb Q$. D'autre part, on a encore $\cup_{q\in \mathbb Q \cap [-1,1]} (A+q) \subset [-1,2]$. Les $A+q$ étant disjoints et mesurables (non-trivial) et l'invariance par translation de la mesure extérieure (vraie sur $\mathcal P(\mathbb R)$) impliquent $3\geq \sum_{q\in \mathbb Q \cap [-1,1]} m(A+q) = \sum_{q\in \mathbb Q \cap [-1,1]} m(A)$, donc $m(A)=0$.
+Solution: Rappelons que $N$ contient pour chaque classe d'équivalence un unique représentant. Les éléments de $A$ sont donc des représentants de classes d'équivalence disjointes. Par conséquent, les $A+q$ sont disjoints lorsque $q\in \mathbb Q$. D'autre part, on a encore $\cup_{q\in \mathbb Q \cap [-1,1]} (A+q) \subset [-1,2]$. Les $A+q$ étant disjoints et mesurables (cf 4.5) et l' invariance par translation de la mesure extérieure de Lebesgue (cf 4.5) impliquent $3\geq \sum_{q\in \mathbb Q \cap [-1,1]} m(A+q) = m(A)\cdot \sum_{q\in \mathbb Q \cap [-1,1]} 1$, donc $m(A)=0$.
 
 \subsection{} \fbox{
 \parbox{0.9\textwidth}{Soit $m$ la mesure de Lebesgue. Montrer que si $A$ est un Lebesgue-mesurable de mesure $>0$, il existe une partie de $A$ qui n'est pas mesurable.
