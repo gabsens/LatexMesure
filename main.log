@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.9.24)  14 NOV 2016 22:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.9.24)  17 NOV 2016 19:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -812,196 +812,221 @@ Underfull \hbox (badness 10000) in paragraph at lines 295--296
  []
 
 [13]
-Underfull \hbox (badness 10000) in paragraph at lines 297--298
+Underfull \hbox (badness 10000) in paragraph at lines 297--315
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 308--309
+Underfull \hbox (badness 10000) in paragraph at lines 297--315
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 308--309
+Overfull \hbox (8.52069pt too wide) in paragraph at lines 297--315
+\T1/cmr/m/n/10 D'où $[] []$ 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 297--315
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 310--314
+Underfull \hbox (badness 10000) in paragraph at lines 325--326
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 318--319
+Underfull \hbox (badness 10000) in paragraph at lines 325--326
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 318--319
+Underfull \hbox (badness 10000) in paragraph at lines 327--331
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 320--324
+Underfull \hbox (badness 10000) in paragraph at lines 335--336
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 328--329
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 328--329
+Underfull \hbox (badness 10000) in paragraph at lines 335--336
 
  []
 
 [14]
-Underfull \hbox (badness 10000) in paragraph at lines 346--347
+Underfull \hbox (badness 10000) in paragraph at lines 337--341
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 346--347
+Underfull \hbox (badness 10000) in paragraph at lines 345--346
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 348--354
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 348--354
+Underfull \hbox (badness 10000) in paragraph at lines 345--346
 
  []
 
 [15]
-Underfull \hbox (badness 10000) in paragraph at lines 358--359
+Underfull \hbox (badness 10000) in paragraph at lines 363--364
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 358--359
+Underfull \hbox (badness 10000) in paragraph at lines 363--364
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 360--363
+Underfull \hbox (badness 10000) in paragraph at lines 365--371
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 365--371
 
  []
 
 [16]
-Underfull \hbox (badness 10000) in paragraph at lines 378--379
+Underfull \hbox (badness 10000) in paragraph at lines 376--377
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 378--379
+Underfull \hbox (badness 10000) in paragraph at lines 376--377
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 380--402
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 380--402
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 380--402
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 380--402
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 405--406
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 405--406
+Underfull \hbox (badness 10000) in paragraph at lines 378--381
 
  []
 
 [17]
-Underfull \hbox (badness 10000) in paragraph at lines 411--412
+Underfull \hbox (badness 10000) in paragraph at lines 396--420
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 411--412
+Underfull \hbox (badness 10000) in paragraph at lines 396--420
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 396--420
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 396--420
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 396--420
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 423--424
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 423--424
 
  []
 
 [18]
-Underfull \hbox (badness 10000) in paragraph at lines 421--422
+Underfull \hbox (badness 10000) in paragraph at lines 429--430
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 421--422
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 423--437
-
- []
-
-
-Overfull \hbox (70.04674pt too wide) in paragraph at lines 423--437
-\T1/cmr/m/n/10 et en som-mant $[] []$ 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 423--437
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 423--437
+Underfull \hbox (badness 10000) in paragraph at lines 429--430
 
  []
 
 [19]
-Underfull \hbox (badness 10000) in paragraph at lines 448--449
+Underfull \hbox (badness 10000) in paragraph at lines 439--440
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 448--449
+Underfull \hbox (badness 10000) in paragraph at lines 439--440
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 464--465
+Underfull \hbox (badness 10000) in paragraph at lines 441--455
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 464--465
+Overfull \hbox (70.04674pt too wide) in paragraph at lines 441--455
+\T1/cmr/m/n/10 et en som-mant $[] []$ 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 441--455
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 441--455
 
  []
 
 [20]
-Underfull \hbox (badness 10000) in paragraph at lines 475--476
+Underfull \hbox (badness 10000) in paragraph at lines 466--467
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 475--476
+Underfull \hbox (badness 10000) in paragraph at lines 466--467
 
  []
 
-[21] (./main.aux) ) 
+
+Underfull \hbox (badness 10000) in paragraph at lines 482--483
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 482--483
+
+ []
+
+[21]
+Underfull \hbox (badness 10000) in paragraph at lines 493--494
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 493--494
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 503--504
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 503--504
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 505--506
+
+ []
+
+[22] [23] (./main.aux) ) 
 Here is how much of TeX's memory you used:
  3310 strings out of 493014
  41043 string characters out of 6133351
@@ -1009,30 +1034,31 @@ Here is how much of TeX's memory you used:
  6842 multiletter control sequences out of 15000+600000
  10879 words of font info for 31 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 28i,15n,30p,959b,439s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/cm-super
-/cm-super-t1.enc}</usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmbx10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmex10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmmi10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmmi5.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmmi7.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-r10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5
-.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pf
-b></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
-></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><
-/usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.p
-fb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm
-10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/symbols/
-msbm7.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfbx1
-000.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfbx120
-0.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfrm0700.
-pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pf
-b>
-Output written on main.pdf (21 pages, 264106 bytes).
+ 28i,15n,30p,945b,439s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/cm-
+super/cm-super-t1.enc}</usr/local/texlive/2016/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmbx10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmex10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmmi10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmmi5.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmmi7.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmr10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmr5.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+r7.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy1
+0.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.
+pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pf
+b></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/symbols/msam1
+0.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/symbols/m
+sbm10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/symbo
+ls/msbm7.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sf
+bx1000.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfbx
+1200.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfrm07
+00.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfrm1000
+.pfb>
+Output written on main.pdf (23 pages, 276778 bytes).
 PDF statistics:
- 141 PDF objects out of 1000 (max. 8388607)
- 100 compressed objects within 1 object stream
+ 152 PDF objects out of 1000 (max. 8388607)
+ 107 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
