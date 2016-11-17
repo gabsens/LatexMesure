@@ -377,7 +377,7 @@ Soit $m$ la mesure de Lebesgue et $A$ un Lebesgue-mesurable tel que $m(A)>0$. On
 
 Solution: Comme $0<m(A) = \lim_n m(A \cap (-n,n))$, on dispose de $N$ tel que $m(A\cap (-N,N))>0$. Posons $B=A \cap (-N,N)$. Si on prouve que $0$ est intérieur à $B-B$, l'inclusion $B-B\subset A-A$ permet de conclure que $0$ est intérieur à $A$. Dans la suite, on pourra donc supposer sans perte de généralité que $m(A)<\infty$. \newline \newline 
 Supposons par l'absurde que $0$ n'est pas dans l'intérieur de $A-A$. Alors on dispose de $(x_n) \in (A-A)^{\mathbb N}$ telle que $x_n\to 0$.\newline
-Comme $m(A)>0$, d'après 4.10, on dispose, pour $0<\epsilon<1$, d'un intervalle ouvert $I$ tel que $m(I\cap A) > (1-\epsilon)m(I)$, ce qui implique $m(I)<\infty$. \newline
+Comme $m(A)>0$, d'après 4.10, on dispose, pour $0<\epsilon<1$, d'un intervalle ouvert borné $I$ tel que $m(I\cap A) > (1-\epsilon)m(I)$. \newline
 On note également que $A+x_n\subset A^c$ et $$\begin{aligned}[t] m(I \cap (A + x_n )) &= m((I-x_n)\cap A) \quad \text{ invariance par translation} \\
 &\geq m(I\cap (I-x_n)\cap A) \\
 &= m(I\cap A) -  m((I\setminus (I-x_n)) \cap A) \\ 
@@ -391,7 +391,7 @@ Ceci est absurde dès que $\epsilon <\frac 13$.
 \newpage
 \subsection{} \fbox{
 \parbox{0.9\textwidth}{
-Soit $m$ la mesure de Lebesgue. Construire une borélien $A$ tel que \newline
+Soit $m$ la mesure de Lebesgue. Construire un borélien $A$ tel que \newline
 $0<m(A\cap I)<m(I)$ pour tout intervalle ouvert $I$ non réduit à un point.
 }}\\\\
 Solution: Démontrons d'abord le lemme suivant: \newline \newline
@@ -496,4 +496,18 @@ Solution: On a $m(A-\mathbb Q)=0$. En effet, $$m(A-\mathbb Q)=m(\cup_{q\in\mathb
 
 Alors n'importe quel $c\notin A-\mathbb Q$ convient.
 
+\subsection{} \fbox{
+\parbox{0.9\textwidth}{
+Soit $m$ la mesure de Lebesgue et $\mu$ une mesure sur la tribu de Lebesgue. On suppose que $\mu$ est invariante par translation et qu'il existe $B$ un Lebesgue-mesurable d'intérieur non vide tel que $\mu(B)<\infty$. \newline
+Alors $\mu$ est proportionnelle à $m$.
+}} \\ \\
+
+Solution: $\bullet$ Comme $\mu$ est une mesure, $\mu\left(\left(0,1\right]\right) = n\cdot \mu\left(\left(0,\frac 1n\right]\right)$ pour tout $n\geq 1$. Donc $\displaystyle \mu\left(\left(0,\frac 1n\right]\right) = \frac{\mu\left(\left(0,1\right]\right)}n$.\newline \newline
+$\bullet$ Soient $a=\frac pq$ et $b=\frac{p'}{q'}$ des rationnels avec $q,q'>0$ et $a<b$. Alors $$\begin{aligned}\mu\left(\left(a,b\right]\right) &= \mu\left(\left(0,b-a\right]\right) \\&= \mu\left(\left(0, \frac{p'q-pq'}{qq'}\right]\right) \\&= (p'q-pq')\mu\left(\left(0, \frac{1}{qq'}\right]\right)\\&=(p'q-pq') \frac{\mu\left(\left(0,1\right]\right)}{qq'}\\&= (b-a)\mu\left(\left(0,1\right]\right)\end{aligned}$$ \newline
+$\bullet$ Soit $a\in \mathbb R$. Comme $\displaystyle \{a\}=  \cap_n \left(a-\frac 1n, a\right]$, on peut trouver $N$ tel que une translation de $\displaystyle \left(a-\frac 1N, a\right]$ est dans l'intérieur de $B$, ce qui donne $\mu\left(\left(a-\frac 1N,a\right]\right) <\infty$, donc $$\mu\left(\{a\}\right)=\lim_n \mu\left(\left(a-\frac 1n, a\right]\right)=\lim_n \mu\left(\left(0, \frac 1n\right]\right)=\mu\left(\left(0,1\right]\right)\cdot 0 = 0 $$\newline
+$\bullet$ Soient $a,b\in \mathbb R$. Soit $a_n\in \mathbb Q^{\mathbb N}$ une suite croissante telle que $a_n\to a$ et $b_n$ décroissante telle que $b_n\to b$. Alors  $$\begin{align}\mu((a,b]) &= \mu ((a,b)) \\&= \mu(\cup_n(a_n,b_n))\\&=\lim_n \mu((a_n,b_n)) \\&= \lim_n \mu((a_n,b_n])\\&=(b_n-a_n)\mu((0,1]) \\ &= (b-a)\mu((0,1])\end{align}$$\newline
+$\bullet$ $\mu$ et $\mu((0,1])m$ coincident sur un $\pi$-système, par continuité croissante $\mu(\mathbb R) = \mu((0,1])m(\mathbb R)$ et $m$ est $\sigma$-finie. Donc $\mu$ et $\mu((0,1])m$ coincident sur la tribu engendrée par les $(a,b]$, donc sur la tribu des boréliens.\newline
+$\bullet$ Soit $A$ un Lebesgue-mesurable, $A=B\cup C$ où $B$ est borélien et $C$ un $m$-négligeable, de sorte que $m(A)=m(B)$. Il existe $D$ un borélien tel que $C\subset D$ et $m(D)=0$, donc $\mu(D)=0$. Alors $$\mu(B)\leq \mu(B\cup C)=\mu(A)\leq \mu(B\cup D)\leq \mu(B)+\mu(D) = \mu(B) $$ 
+D'où $\mu(A)=\mu(B) = \mu((0,1])m(B)=\mu((0,1])m(A)$. \newline
+$\mu((0,1])m$ et $\mu$ coincident sur la tribu de Lebesgue.
 \end{document}
