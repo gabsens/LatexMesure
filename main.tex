@@ -509,5 +509,19 @@ $\bullet$ Soient $a,b\in \mathbb R$. Soit $a_n\in \mathbb Q^{\mathbb N}$ une sui
 $\bullet$ $\mu$ et $\mu((0,1])m$ coincident sur un $\pi$-système, par continuité croissante $\mu(\mathbb R) = \mu((0,1])m(\mathbb R)$ et $m$ est $\sigma$-finie. Donc $\mu$ et $\mu((0,1])m$ coincident sur la tribu engendrée par les $(a,b]$, donc sur la tribu des boréliens.\newline
 $\bullet$ Soit $A$ un Lebesgue-mesurable, $A=B\cup C$ où $B$ est borélien et $C$ un $m$-négligeable, de sorte que $m(A)=m(B)$. Il existe $D$ un borélien tel que $C\subset D$ et $m(D)=0$, donc $\mu(D)=0$. Alors $$\mu(B)\leq \mu(B\cup C)=\mu(A)\leq \mu(B\cup D)\leq \mu(B)+\mu(D) = \mu(B) $$ 
 D'où $\mu(A)=\mu(B) = \mu((0,1])m(B)=\mu((0,1])m(A)$. \newline
-$\mu((0,1])m$ et $\mu$ coincident sur la tribu de Lebesgue.
+$\mu((0,1])m$ et $\mu$ coincident sur la tribu de Lebesgue.\newpage
+
+\section{Fonctions mesurables}
+
+\subsection{} \fbox{
+\parbox{0.9\textwidth}{
+Soit $(X,\mathcal A)$ mesurable et $f:X\to \mathbb R$. On suppose que pour tout rationnel $f^{-1}((r,\infty))\in \mathcal A$. Montrer que $f$ est mesurable
+}}\\ \\
+
+Solution: Soit $\mathcal C = \{(r,\infty); r\in \mathbb Q\}$. Alors $f^{-1}(\mathcal C)\subset \mathcal A$, donc $\sigma(f^{-1}(\mathcal C))\subset \mathcal A$, d'où $f^{-1}(\sigma(\mathcal C)) \subset \mathcal A$ ie $f^{-1}(\mathcal B(\mathbb R)) \subset \mathcal A$. $f$ est donc mesurable.
+
+\subsection{} \fbox{
+\parbox{0.9\textwidth}{
+Soit $f:(0,1)\to \mathbb R$ telle que pour tout $x\in (0,1)$, il existe $r_x>0$ et une fonction $g_x$ Borel-mesurable telles que $f$ et $g_x$ coincident sur $(x-r_x,x+r_x)\cap (0,1)$. Montrer que $f$ est Borel-mesurable.
+}}
 \end{document}
