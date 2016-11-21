@@ -537,15 +537,64 @@ Solution: Pour $a\in \mathbb R$, si $a\leq 0$, $(\frac{1}{f})^{-1}((a,\infty)) =
 Donc $\frac 1f$ mesurable.
 
 \subsection{} \fbox{
-\parbox{0.9\textwidth}{ Soit $f_n$ une suite de fonctions mesurables. Montrer que l'ensemble\newline 
- $A=\{x \;| \lim_{n} f_n(x) \text{ existe}\}$ est mesurable.
+\parbox{0.9\textwidth}{ Soit $f_n$ une suite de fonctions Borel-mesurables. Montrer que l'ensemble\newline 
+ $A=\{x \;| \lim_{n} f_n(x) \text{ existe}\}$ est Borel-mesurable.
 }} \\ \\
 
 Solution: Dans le cas où on considère des limites finies, $$A=\cap_{n \geq 1} \cup_{N\geq 1} \cap_{p\geq N} \cap_{q\geq N} \{x, \left| f_q(x)-f_p(x)\right|\leq \frac 1n\}$$
 Dans le cas où la limite considérée est $\infty$: $$A=\cap_{n\geq 1} \cup_{N\geq 1} \cap_{p\geq N} \{x, f_p(x)\geq n\}$$
 Dans tous les cas, on reste dans $\mathcal A$.
 
+\newpage
 \subsection{} \fbox{
 \parbox{0.9\textwidth}{ Soit $f:\mathbb R\to \mathbb R$ Lebesgue-mesurable. Montrer qu'il existe $g$ Borel-mesurable tel que $f=g$ presque partout.
+}}\\\\
+
+Solution: Montrons le résultat pour les fonctions Lebesgue-mesurables de $\mathbb R$ dans $\mathbb R^+$. Pour $n\in \mathbb N$ et $k \in \mathbb N$, on pose $\displaystyle E_{n,k}=f^{-1}\left( \left[\frac{k}{2^n},\frac{k+1}{2^n}\right)\right)$.\newline
+On note que pour $n\in \mathbb N$, $\cup_k E_{n,k} = \mathbb R$ et on peut écrire pour chaque $k$, \newline
+$E_{n,k} = B_{n,k} \cup N_{n,k}$ avec $B_{n,k}$ borélien (plus précisément un $F_\delta$) et $N_{n,k}$ Lebesgue-négligeable, l'union étant disjointe.\newline
+On définit alors $\begin{aligned}
+  g_n(x)=
+  \begin{cases}
+    \frac{k}{2^n}  & \text{si }  x\in B_{n,k}\\
+    0 & \text{si }  x\in N_{n,k}\\
+  \end{cases}
+\end{aligned}$\newline
+Montrons que $g_n$ est Borel-mesurable. Soit $a\in \mathbb R$.\newline
+Alors $\begin{aligned}[t] \{x\in \mathbb R, g_n(x)>a\} &= \cup_{k\in \mathbb N} \{x\in E_{n,k}, g_n(x)>a\}\\
+&= \cup_{k\in \mathbb N} \left( \{x\in B_{n,k}, g_n(x)>a\} \cup \{x\in N_{n,k}, g_n(x)>a\} \right)\\
+&= \cup_{k\in \mathbb N} ( \underbrace{\{x\in B_{n,k}, \frac{k}{2^n}>a\}}_{=\begin{cases}
+    B_{n,k}  & \text{si }  \frac{k}{2^n}>a\\
+    \emptyset & \text{sinon } \\
+  \end{cases}} \quad \cup \quad \underbrace{\{x\in N_{n,k}, 0>a\}}_{=\begin{cases}
+    N_{n,k}  & \text{si }  0>a\\
+    \emptyset & \text{sinon } \\
+  \end{cases}} ) 
+\end{aligned}$
+Ainsi, si $a<0$, comme $g_n$ est à valeurs $\geq 0$, $\{x\in \mathbb R, g_n(x)>a\} = \mathbb R$.\newline
+Si $a\geq 0$, $$\{x\in \mathbb R, g_n(x)>a\} = \cup_{k\in \mathbb N} \begin{cases}
+    B_{n,k}  & \text{si }  \frac{k}{2^n}>a\\
+    \emptyset & \text{sinon } \\
+  \end{cases}$$
+  qui est bien borélien. Donc $g_n$ est Borel-mesurable.\newline
+  Posons $\displaystyle N=\bigcup_{\substack{n\in \mathbb N\\ k\in \mathbb N}}N_{n,k}$. $N$ est de mesure nulle, et sur $N^c$, $g_n\xrightarrow{CVS} f$.\newline
+  La fonction $\limsup g_n$ est Borel-mesurable et coincide avec $f$ sur $N^c$, donc presque partout.\newline \newline
+  \underline{Note}: Pour des fonctions $f:\mathbb R\to  \overline{\mathbb R}$, en posant $E_{n,-1} = f^{-1}(\infty)$, et \newline $\begin{aligned}
+  g_n(x)=
+  \begin{cases}
+    \frac{k}{2^n}  & \text{si }  x\in B_{n,k}\\
+    0 & \text{si }  x\in N_{n,k}\cup f^{-1}(\infty) \\
+  \end{cases}
+\end{aligned}$\newline
+on a le résultat comme précédemment.
+
+Soit $f:\mathbb R\to \mathbb R$ Lebesgue-mesurable. On écrit $f=f^+ - f^-$ avec $f^+$ et $f^-$ Lebesgue-mesurables et positives. On dispose alors de $g^+$ et $g^-$ Borel-mesurables telles que $f^+=g^+$ et $f^-=g^-$ presque-sûrement, donc $f=g^+-g^-$ presque-sûrement. 
+
+\subsection{} \fbox{
+\parbox{0.9\textwidth}{ }}
+
+\subsection{} \fbox{
+\parbox{0.9\textwidth}{Soit $f:\mathbb R\to \mathbb R$ dérivable. Montrer que $f$ et $f'$ sont Borel-mesurables.
 }}
+
 \end{document}
