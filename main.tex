@@ -523,5 +523,29 @@ Solution: Soit $\mathcal C = \{(r,\infty); r\in \mathbb Q\}$. Alors $f^{-1}(\mat
 \subsection{} \fbox{
 \parbox{0.9\textwidth}{
 Soit $f:(0,1)\to \mathbb R$ telle que pour tout $x\in (0,1)$, il existe $r_x>0$ et une fonction $g_x$ Borel-mesurable telles que $f$ et $g_x$ coincident sur $(x-r_x,x+r_x)\cap (0,1)$. Montrer que $f$ est Borel-mesurable.
+}}\\\\
+
+Solution: Pour tout $x$, quitte à considérer un $r_x$ plus petit on peut supposer $(x-r_x,x+r_x)\subset (0,1)$. Soit $a\in \mathbb R$. On note que $$f^{-1}((a,\infty)) = \cup_{x\in (0,1)}(g_x^{-1}((a,\infty))\cap (x-r_x,x+r_x))$$ Comme $\mathbb R$ est séparable, il est à base dénombrable, donc fortement Lindelöf. De tout recouvrement ouvert on peut extraire un sous-recouvrement dénombrable: il existe $x_n\in (0,1)$, $r_n>0$ et $g_n$ Borel-mesurable tel que $$f^{-1}((a,\infty)) = \cup_{n\geq 1}(g_n^{-1}((a,\infty))\cap (x_n-r_n,x_n+r_n))$$
+Donc $f$ est Borel-mesurable.
+
+\subsection{} \fbox{
+\parbox{0.9\textwidth}{
+Soit $f$ mesurable avec $f>0$. Montrer que $\frac 1f$ est mesurable.
+}}\\ \\
+
+Solution: Pour $a\in \mathbb R$, si $a\leq 0$, $(\frac{1}{f})^{-1}((a,\infty)) = X\in \mathcal A$.\newline Si $a>0$,  $(\frac{1}{f})^{-1}((a,\infty)) = {f}^{-1}((-\infty,\frac 1a))\in \mathcal A$\newline
+Donc $\frac 1f$ mesurable.
+
+\subsection{} \fbox{
+\parbox{0.9\textwidth}{ Soit $f_n$ une suite de fonctions mesurables. Montrer que l'ensemble\newline 
+ $A=\{x \;| \lim_{n} f_n(x) \text{ existe}\}$ est mesurable.
+}} \\ \\
+
+Solution: Dans le cas où on considère des limites finies, $$A=\cap_{n \geq 1} \cup_{N\geq 1} \cap_{p\geq N} \cap_{q\geq N} \{x, \left| f_q(x)-f_p(x)\right|\leq \frac 1n\}$$
+Dans le cas où la limite considérée est $\infty$: $$A=\cap_{n\geq 1} \cup_{N\geq 1} \cap_{p\geq N} \{x, f_p(x)\geq n\}$$
+Dans tous les cas, on reste dans $\mathcal A$.
+
+\subsection{} \fbox{
+\parbox{0.9\textwidth}{ Soit $f:\mathbb R\to \mathbb R$ Lebesgue-mesurable. Montrer qu'il existe $g$ Borel-mesurable tel que $f=g$ presque partout.
 }}
 \end{document}
