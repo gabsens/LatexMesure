@@ -611,4 +611,52 @@ Solution: $f$ étant dérivable, elle est continue, donc Borel-mesurable. On rem
 \subsection{} \fbox{
 \parbox{0.9\textwidth}{ }}
 
+\newpage 
+\section{Intégrale des fonctions mesurables positives}
+
+\subsection{} \fbox{
+\parbox{0.9\textwidth}{ Soit $f:(X,\mathcal{A},\mu)\to (\overline{\mathbb R}, \mathcal{B}(\overline{\mathbb R}))$ mesurable positive. Montrer que $\int f d\mu = 0$ si et seulement si $f$ est nulle presque partout. }}\\\\
+
+Solution: \fbox{$\Rightarrow$} Soit $E=f^{-1}(\{0\})\in \mathcal A$. On note que $E^c = \cup_n f^{-1}(\left[ \frac 1n, \infty\right])$. \newline
+Si par l'absurde $\mu(E^c)>0$, alors il existe $p$ tel que $A_p=f^{-1}(\left[ \frac 1p,\infty\right])$ est de mesure $>0$. Comme $\displaystyle f\geq f\chi_{A_p}\geq \frac 1p \chi_{A_p}$, on  a $$\int f d\mu \geq \frac{\mu(A_p)}{p}>0$$
+Absurde.\newline 
+\fbox{$\Leftarrow$} On suppose $f$ nulle presque partout, ie $\mu(E^c)=0$. Soit $\varphi$ simple $\geq 0$ telle que $\varphi\leq f$. Alors $\varphi$ est nulle presque partout. \newline
+On écrit $\varphi$ sous forme canonique $\varphi = \sum_{i=1}^n a_i\chi_{A_i}$. Si $a_i$ est $\neq 0$, on a pour $x\in E$, $\chi_{A_i}(x)=0$, donc $x\in A_i^c$, d'où $E\subset A_i^c$, $A_i \subset E^c$ et $\mu(A_i)=0$.\newline 
+D'où $$\int \varphi d\mu = \int \left( \sum_{\substack{i=1 \\ a_i \neq 0}}^na_i\chi_{A_i} \right) d\mu = \sum_{i=1}^n 0 = 0$$ \newline
+Donc $\int f d\mu = 0$.
+
+\subsection{} \fbox{
+\parbox{0.9\textwidth}{ Soit $(X,\mathcal A,\mu)$ un espace mesuré avec $\mu(X)<\infty$. \newline 
+Soient $f_n:(X,\mathcal{A},\mu)\to (\mathbb R, \mathcal{B}(\mathbb R))$ mesurables positives qui convergent uniformément vers $f$. Montrer que $f$ est mesurable et $\int f d\mu = \lim_n \int f_n d\mu$.
+}}\\ \\
+
+Solution: $f$ est limite simple de mesurables, donc mesurable. \newline
+Soit $\epsilon>0$. Soit $N$ tel que pour tout $n\geq N$ et $x\in X$, $|f_n(x)-f(x)|\leq \frac{\epsilon}{\mu(E)}$.\newline
+Donc $ f(x) \leq f_n(x)+\frac{\epsilon}{\mu(E)}$, en intégrant $\int f d\mu \leq \int f_n d\mu + \epsilon$ et en passant à la limite $\int f d\mu \leq \lim_n \int f_n d\mu + \epsilon $. Ceci étant vrai pour tout $\epsilon$, $\int f d\mu \leq \lim_n \int f_n d\mu$.  \newline
+On fait de même avec $ f_n(x) \leq f(x)+\frac{\epsilon}{\mu(E)}$.
+\newpage 
+
+\subsection{} \fbox{
+\parbox{0.9\textwidth}{Soit $f:(X,\mathcal{A},\mu)\to (\overline{\mathbb R}, \mathcal{B}(\overline{\mathbb R}))$ mesurable positive telle que $\int f d\mu <\infty$. Montrer que $f$ est finie presque partout.
+}}\\ \\
+
+Solution: Soit $E=f^{-1}(\{\infty\})$. On a $E= \cap _n f^{-1}([n,\infty]) = \cap_n \{f\geq n\}$.\newline
+De l'inégalité $\displaystyle n\chi_{\{f\geq n\}} \leq f$ on tire $$\frac 1n \int f d\mu\geq \mu(\{f\geq n\})\geq \mu(E) $$
+En passant à la limite, $\mu(E)=0$.
+
+\subsection{} \fbox{
+\parbox{0.9\textwidth}{Soit $f:(X,\mathcal{A},\mu)\to (\overline{\mathbb R}, \mathcal{B}(\overline{\mathbb R}))$ mesurable positive telle que $\int f d\mu <\infty$. Montrer que $\{f>0\}$ est $\sigma$-fini.
+}}\\ \\
+
+Solution: $\{f>0\} = \cup_n \{f\geq \frac 1n \}$ et $\displaystyle \frac 1n \chi_{\{f\geq \frac 1n\}}\leq f$, donc $$\mu(\{f\geq \frac 1n\})\leq n\int f d\mu <\infty $$
+
+\subsection{} \fbox{
+\parbox{0.9\textwidth}{Soit $f:(X,\mathcal{A},\mu)\to (\overline{\mathbb R}, \mathcal{B}(\overline{\mathbb R}))$ mesurable positive telle que $\int f d\mu <\infty$. Montrer que pour tout $\epsilon >0$, il existe $E\in \mathcal A$ tel que $\mu(E)<\infty$ et $\int f d\mu \leq \int_{E} f d\mu + \epsilon$.
+}}\\ \\
+
+Solution: Pour $\epsilon >0$, on dispose de $\varphi$ simple positive telle $0\leq \varphi \leq f$ et \newline
+$\int \varphi d\mu \geq \int f d\mu - \epsilon$. En écrivant $\varphi$ sous sa forme canonique $\sum_{i=1}^n a_i \chi_{A_i}$ et en supposant sans perte de généralité que $a_1\chi_{A_1} =0 \cdot \chi_{\{\varphi = 0\}}$, on pose $A = \cup_{i=2}^n A_i$. Comme $\int \varphi d\mu = \sum_{i=2}^n a_i \mu(A_i)<\infty$ et que les $(a_i)_{i\geq 2}$ sont $> 0$, on a $\mu(A_i)<\infty$ pour $i\geq 2$, et donc $\mu(A)<\infty$. \newline
+Sur $A^c = A_1$, $\varphi$ est nulle, donc $\int \varphi d\mu  = \int_{A} \varphi d\mu$.\newline  D'où $$\int_A f\geq  \int_A \varphi d\mu = \int \varphi d\mu  \geq \int f d\mu - \epsilon$$ 
+
+
 \end{document}

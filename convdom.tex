@@ -1,0 +1,78 @@
+\documentclass{report}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[francais]{babel}
+\usepackage{titlesec}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{enumitem}
+\date{}
+\begin{document}
+
+
+\underline{\textbf{Théorème de convergence dominée}}:\\\\
+Soient $\begin{aligned}[t] &f_n:(X,\mathcal{A},\mu)\to (\mathbb R, \mathcal{B}(\mathbb R)) \text{ une suite de fonctions intégrables,} \\
+&f:(X,\mathcal{A},\mu)\to (\mathbb R, \mathcal{B}(\mathbb R)) \text{une fonction mesurable,} \\
+&g:(X,\mathcal{A},\mu)\to (\mathbb R, \mathcal{B}(\mathbb R)) \text{une fonction intégrable positive}
+\end{aligned}$ \newline
+telles que: $\begin{aligned}[t] &\\
+& -f_n\to f \text{ presque partout,}\\
+& -\forall n\geq 1, |f_n|\leq g
+\end{aligned}$ \newline
+Alors:  $\begin{aligned}[t] &\\
+&-f \text{ est intégrable}\\
+&-\int f d\mu  = \lim_n \int f_n d\mu
+\end{aligned}$\newline \newline 
+\noindent\rule[0.5ex]{\linewidth}{1pt}
+Preuve: Soit $E=\{x\in X, f_n(x) \to f(x) \} $, de sorte que $\mu(E^c) =0$.\newline
+On définit $$\begin{aligned}
+  \widetilde{f}(x)=
+  \begin{cases}
+    f(x) & \text{si }  x\in E \\
+    0 & \text{sinon }  \\
+  \end{cases}
+\end{aligned}$$\newline
+Pour $a\in \mathbb R$, si $a\geq 0$, $$\{\widetilde{f}>a \} = \{f>a \}\in \mathcal A$$
+Si $a<0$, $$\begin{aligned}\{\widetilde{f}>a \} &= \{x\in E, \widetilde{f}(x)> a\} \cup \{x\in E^c, \widetilde{f}(x)> a\} \\
+&=\{x\in E, f(x)> a\} \cup \{x\in E^c, 0> a\} \\
+&=\{f>a \} \cup E^c
+\end{aligned} $$
+On sait (cf exos) que $E\in \mathcal A$, donc $E^c \in \mathcal A$. Donc $\{\widetilde{f}(x)> a\}\in \mathcal A$.\newline \newline 
+On définit également  $$\begin{aligned}
+  \widetilde{f_n}(x)=
+  \begin{cases}
+    f_n(x) & \text{si }  x\in E \\
+    0 & \text{sinon }  \\
+  \end{cases}
+\end{aligned}$$ $$\begin{aligned}
+  \widetilde{g}(x)=
+  \begin{cases}
+    g(x) & \text{si }  x\in E \\
+    0 & \text{sinon }  \\
+  \end{cases}
+\end{aligned}$$\newline
+De même $\widetilde{g}$ et les $\widetilde{f_n}$ sont mesurables, avec \newline
+$\bullet$ $\int |\widetilde{g}| d\mu  = \int_E  |\widetilde{g}| d\mu + \int_{E^c}  |\widetilde{g}| d\mu =\int_E  |\widetilde{g}| d\mu = \int_E  |g| d\mu <\infty $ donc $\widetilde{g}$ intégrable. \newline
+$\bullet$ $\forall n\geq 1, |\widetilde{f_n}|\leq \widetilde{g}$ donc les $\widetilde{f_n}$ intégrables. \newline
+De $ |\widetilde{f_n}|\leq \widetilde{g}$ on tire  $|\widetilde{f}|\leq |\widetilde{g}|$ et $\widetilde{f}$ intégrable, ainsi que $g+\widetilde{f_n}\geq |\widetilde{f_n}| +\widetilde{f_n} \geq 0$. Le lemme de Fatou donne alors $$\begin{aligned} \int |\widetilde{f}| d\mu + \int |\widetilde{g}| d\mu  
+&=  \int |\widetilde{f}| +  |\widetilde{g}| d\mu \\
+&= \int \liminf \left(|\widetilde{f_n}|\right) +  \liminf|\widetilde{g}| d\mu\\
+&\leq \int \liminf \left( |\widetilde{f_n}| +  |\widetilde{g}| \right)d\mu \quad \text{intégration d'une inégalité entre fonctions positives} \\
+&\leq \liminf\left(  \int |\widetilde{f_n}| +  |\widetilde{g}| d\mu \right) \quad \text{Fatou }\\
+&= \liminf\left(  \int |\widetilde{f_n}| d\mu  +  \int |\widetilde{g}| d\mu \right) \\
+&\leq \int |\widetilde{g}| d\mu + \liminf \left( \int  |\widetilde{f_n}| d\mu\right)
+\end{aligned}$$\newline
+Donc $$ \int |\widetilde{f}| d\mu \leq \liminf \left( \int  |\widetilde{f_n}| d\mu\right)$$\newline
+On a de même $g-\widetilde{f_n}\geq |\widetilde{f_n}| -\widetilde{f_n} \geq 0$, donc 
+$$\begin{aligned} 0 \leq  \int |\widetilde{g}| d\mu - \int |\widetilde{f}| d\mu 
+&=  \int |\widetilde{g}| -  |\widetilde{f}| d\mu \\
+&= \int \liminf|\widetilde{g}| + \liminf \left(-|\widetilde{f_n}|\right)  d\mu\\
+&\leq \int \liminf \left( |\widetilde{g}| -  |\widetilde{f_n}| \right)d\mu \quad \text{intégration d'une inégalité entre fonctions positives}  \\
+&\leq \liminf\left(  \int |\widetilde{g}| -  |\widetilde{f_n}| d\mu \right) \\
+&= \liminf\left(  \int |\widetilde{g}| d\mu  -  \int |\widetilde{f_n}| d\mu \right) \\
+&\leq \int |\widetilde{g}| d\mu + \liminf \left( \int  |\widetilde{f_n}| d\mu\right)
+\end{aligned}$$
+
+
+\end{document}

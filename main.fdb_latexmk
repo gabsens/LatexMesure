@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1479751486 "main.tex" "main.pdf" "main" 1479751486
+["pdflatex"] 1479917988 "main.tex" "main.pdf" "main" 1479917989
   "/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1136849721 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/local/texlive/2016/texmf-dist/fonts/map/fontname/texfonts.map" 1272929888 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/local/texlive/2016/texmf-dist/fonts/tfm/jknappen/ec/ecbx1000.tfm" 1136768653 3584 2d666ecf6d466d8b007246bc2f94d9da ""
@@ -67,9 +67,9 @@
   "/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1474700305 1888048 f2c5faed5981a516f406b2ccc20bff71 ""
   "/usr/local/texlive/2016/texmf-var/web2c/pdftex/pdflatex.fmt" 1474700370 3873397 55332fef92779db16a6a33734ab258bb ""
   "/usr/local/texlive/2016/texmf.cnf" 1463979140 577 2938757e76f31531e65cc647e3507693 ""
-  "main.aux" 1479751486 4650 64b644f51ecf63652fde946251ca9a8f ""
-  "main.tex" 1479751485 54697 9167d6089e0b068145d3832955c555b3 ""
+  "main.aux" 1479917988 5152 528fd551e45fa0ff753af77bc50a10b9 ""
+  "main.tex" 1479917987 58848 c8aece4781a080f585a201a20cb36d09 ""
   (generated)
-  "main.log"
   "main.pdf"
   "main.aux"
+  "main.log"
