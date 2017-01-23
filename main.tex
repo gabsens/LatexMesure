@@ -689,14 +689,14 @@ Conclusion: $$\limsup \left( \int_E f_n d\mu\right)= \liminf\left( \int_E f_n d\
 \newpage 
 \subsection{} \fbox{
 \parbox{0.9\textwidth}{
-Soit $D$ une partie dénombrable de $\mathbb R$, $\nu$ la mesure de comptage sur $D$ et $f:(\mathbb R, \mathcal B(\mathbb R))\to (\mathbb R, \mathcal B(\mathbb R))$ positive. Montrer que $\int f d\nu = \sum_{t\in D} f(t)$
+Soit $(X,\mathcal A)$ mesurable, $D$ une partie dénombrable de $X$, $\nu$ la mesure de comptage sur $D$ et $f:(X, \mathcal A)\to (\mathbb R, \mathcal B(\mathbb R))$ mesurable positive. Montrer que $\int f d\nu = \sum_{t\in D} f(t)$
 }}\\ \\
 
-Solution: Pour $A\in \mathcal B(\mathbb R)$ et $f=1_A$, on a $\int f d\nu = \nu(A) = \sum_{t\in D} 1_A(t)$. \newline
+Solution: Pour $A\in \mathcal A$ et $f=\chi_A$, on a $\int f d\nu = \nu(A) = \sum_{t\in D} 1_A(t)$. \newline
 Pour $f=\sum_{i=1}^p a_i \chi_{A_i}$ simple positive, on a par linéarité $$\begin{aligned}
-\int f d\nu &= \sum_{i=1}^p a_i \int 1_{\chi_i} d\nu \\
-&= \sum_{i=1}^p a_i \sum_{t\in D} 1_{\chi_i}(t)\\
-&= \sum_{t\in D}\sum_{i=1}^p a_i 1_{\chi_i}(t) \\
+\int f d\nu &= \sum_{i=1}^p a_i \int \chi_{A_i} d\nu \\
+&= \sum_{i=1}^p a_i \sum_{t\in D} \chi_{A_i}(t)\\
+&= \sum_{t\in D}\sum_{i=1}^p a_i \chi_{A_i}(t) \\
 &= \sum_{t\in D} f(t)
 \end{aligned}$$
 Soit $f$ mesurable positive. On dispose de $\varphi_n$ une suite de fonction étagées positives qui converge en croissant vers $f$. Alors $$\begin{aligned}
