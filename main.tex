@@ -658,5 +658,124 @@ Solution: Pour $\epsilon >0$, on dispose de $\varphi$ simple positive telle $0\l
 $\int \varphi d\mu \geq \int f d\mu - \epsilon$. En écrivant $\varphi$ sous sa forme canonique $\sum_{i=1}^n a_i \chi_{A_i}$ et en supposant sans perte de généralité que $a_1\chi_{A_1} =0 \cdot \chi_{\{\varphi = 0\}}$, on pose $A = \cup_{i=2}^n A_i$. Comme $\int \varphi d\mu = \sum_{i=2}^n a_i \mu(A_i)<\infty$ et que les $(a_i)_{i\geq 2}$ sont $> 0$, on a $\mu(A_i)<\infty$ pour $i\geq 2$, et donc $\mu(A)<\infty$. \newline
 Sur $A^c = A_1$, $\varphi$ est nulle, donc $\int \varphi d\mu  = \int_{A} \varphi d\mu$.\newline  D'où $$\int_A f\geq  \int_A \varphi d\mu = \int \varphi d\mu  \geq \int f d\mu - \epsilon$$ 
 
+\subsection{} \fbox{
+\parbox{0.9\textwidth}{
+Soit $f_n:(X,\mathcal{A},\mu)\to (\overline{\mathbb R}, \mathcal{B}(\overline{\mathbb R}))$ mesurables positives qui convergent simplement vers $f$, avec $\int f d\mu = \lim_n \int f_n d\mu <\infty$.\newline
+Pour tout $E\in \mathcal A$, montrer que $\int_E f d\mu = \lim_n \int_E f_n d\mu$.
+}}\\ \\
+
+Solution: Soit $E\in \mathcal A$. La suite des $(f_n\chi_E)$ converge simplement vers $f\chi_E$, et le lemme de Fatou donne $\int_E f d\mu = \int \left(\liminf f_n\chi_E\right) d\mu \leq \liminf\left(\int_E f_n \right)$.\newline
+Montrons que $\limsup \left(\int_E f_n \right) \leq \int_E f d\mu$ et on aura terminé.\newline
+L'inégalité précédente appliquée à $E^c$ donne $$\int_{E^c} f d\mu \leq \liminf\left(\int_{E^c} f_n d\mu \right)$$\newline
+Comme $\int f d\mu = \lim_n \int f_n d\mu <\infty$, les $\left(\int f_n d\mu\right)$ sont bornées et il en est de même des  $\left(\int_E f_n d\mu\right)$.\newline
+Donc $\int_{E^c} f_n d\mu = \int f_n d\mu - \int_E f_n d\mu$ et \newline
+$$\liminf\left(\int_{E^c} f_n d\mu \right) = \liminf \left( \int f_n d\mu - \int_E f_n d\mu \right)$$
+Démontrons le lemme suivant:\newline \newline
+\fbox{
+\parbox{0.9\textwidth}{
+Soient $(a_n), (b_n)$ des suites de réels avec $(b_n)$ majorée. Alors\newline  \centerline{ $\liminf (a_n+b_n)\leq \liminf a_n + \limsup b_n$}
+}}
+\newline \newline
+Pour $n\geq 1$, et $k\geq n$, $\inf_{k\geq n} (a_k+b_k)\leq a_k + b_k \leq a_k + \sup_{k\geq n} b_k$\newline
+Comme $(b_n)$ est majorée, $\sup_{k\geq n} b_k$ est un réel, donc $$\inf_{k\geq n} (a_k+b_k) - \sup_{k\geq n} b_k \leq a_k$$\newline
+Donc $\inf_{k\geq n} (a_k+b_k) - \sup_{k\geq n} b_k \leq \inf_{k\geq n} a_k$ et on a l'inégalité voulue.\newline \newline
+Dans notre cas, toutes les quantités sont bornées, donc \newline
+$$\begin{aligned}\int_{E^c}f d\mu \leq \liminf\left(\int_{E^c} f_n d\mu \right)&\leq \limsup \left(\int f_n d\mu \right) + \liminf \left(-\int_E f_n d\mu\right)\\
+&= \int f d\mu - \limsup \left( \int_E f_n d\mu\right)
+\end{aligned}$$
+D'où $$\limsup \left( \int_E f_n d\mu\right)\leq \int_E f d\mu$$
+Conclusion: $$\limsup \left( \int_E f_n d\mu\right)= \liminf\left( \int_E f_n d\mu\right)= \int_E f d\mu$$
+
+\newpage
+
+\section{Intégration des fonctions intégrables}
+
+\subsection{} \fbox{
+\parbox{0.9\textwidth}{
+Soit $f\in L(X,\mathcal A,\mu)$ et $a>0$. Montrer que $\{|f|\geq a\}$ est de mesure finie. Montrer que $\{f\neq 0\}$ est $\sigma$-fini.
+}}\\ \\
+
+Solution: De l'inégalité entre fonctions mesurables positives $a\chi_{\{|f|\geq a\}} \leq |f|$ on tire $a\mu(\{|f|\geq a\})\leq \int |f| d\mu <\infty$.\newline
+D'autre part, $\{f\neq 0\}=\{|f|\neq 0\}=\cup_n \{|f|\geq \frac 1n\}$, donc $\{f\neq 0\}$ est $\sigma$-fini.
+
+\subsection{} \fbox{
+\parbox{0.9\textwidth}{
+Soit $f:(X,\mathcal{A},\mu)\to (\mathbb R, \mathcal{B}(\mathbb R))$ mesurable et nulle presque-partout.\newline
+Montrer que $f\in L(X,\mathcal A,\mu)$ et $\int f d\mu = 0$.
+}}\\ \\
+
+Solution: $f$ étant nulle presque-partout, $|f|$ l'est aussi, et les résultats du chapitre précédent donnent $\int |f| d\mu = 0$, donc $f\in L(X,\mathcal A,\mu)$. \newline
+De plus, $0\leq f^+\leq |f|$ et $0\leq f^-\leq |f|$, donc $\int f^+ d\mu =\int f^- d\mu = 0$, donc $\int f d\mu = 0$.
+
+\subsection{} \fbox{
+\parbox{0.9\textwidth}{
+Soit $f\in L(X,\mathcal A,\mu)$ et $g:(X,\mathcal{A},\mu)\to (\mathbb R, \mathcal{B}(\mathbb R))$ mesurable tel que $f=g$ presque-partout. Montrer que $g\in L(X,\mathcal A,\mu)$ et $\int g d\mu = \int f d\mu$.
+}}\\ \\
+
+Solution: Posons $E=\{f=g\}\subset \{|f|=|g|\}$. Alors $$\begin{aligned}[t] \int |g| d\mu &= \int_E |g| d\mu + \underbrace{\int_{E^c} |g| d\mu}_{=0 \text{ car }\mu(E^c)=0} \\
+&= \int_E |f| d\mu \\
+&= \int_E |f| d\mu  + \int_{E^c} |f| d\mu \\
+&= \int |f| d\mu
+\end{aligned}$$
+Donc $g\in L(X,\mathcal A,\mu)$. D'autre part, $f-g$ est nulle presque partout, \newline
+donc $\int f-g d\mu = 0$ (exercice précédent), d'où (tout est intégrable) $$\int f d\mu = \int g d\mu$$
+
+\subsection{} \fbox{
+\parbox{0.9\textwidth}{
+On considère l'espace mesurable $(\mathbb N, \mathcal P(\mathbb N))$ muni la mesure de comptage $\mu$. Montrer que $f$ est dans $L(\mathbb N, \mathcal P(\mathbb N),\mu)$ si et seulement si $\sum_n f(n)$ est absolument convergente. Montrer que dans ce cas $\int f d\mu = \sum_{n=1}^\infty f(n)$.
+}}\\ \\
+
+Solution: Dans le cadre des fonctions mesurables positives, $\int |f| d\mu = \sum_{n=1}^\infty |f(n)|$, ce qui prouve l'équivalence recherchée.\newline
+D'autre part $\begin{aligned}[t] \int f d\mu &= \int f^+ d\mu - \int f^- d\mu \\
+&= \sum_{n=1}^\infty f^+(n) - \sum_{n=1}^\infty f^-(n) \\
+&= \sum_{n=1}^\infty \left( f^+(n) - f^-(n) \right) \\
+&= \sum_{n=1}^\infty f(n)
+\end{aligned}$
+
+\subsection{} \fbox{
+\parbox{0.9\textwidth}{
+Soit $(f_n)$ une suite de $L(X,\mathcal A,\mu)$ qui converge uniformément vers une fonction $f$, avec $\mu(X)<\infty$. Montrer que $\int f d\mu = \lim_n \int f_n d\mu$
+}}\\ \\
+
+Solution: Soit $\epsilon >0$. On dispose de $N\geq 1$ tel que $$n\geq N \implies \forall x, |f(x)|\leq \frac{\epsilon}{\mu(X)} + |f_n(x)|$$ Donc $\int |f| d\mu \leq \epsilon +  \int |f_N| d\mu < \infty$ et $f$ est intégrable.\newline
+En écrivant $$f_n(x) - \frac{\epsilon}{\mu(X)} \leq f(x)\leq f_n(x) + \frac{\epsilon}{\mu(X)} $$ on obtient $$ \left| \int f d\mu - \int f_n d\mu \right|\leq \epsilon$$
+Donc $\int f_n d\mu$ converge vers $\int f d\mu$. 
+
+\subsection{} \fbox{
+\parbox{0.9\textwidth}{
+Soit $(f_n)$ une suite de $L(X,\mathcal A,\mu)$ telle que $\sum_{n=1}^\infty \int |f_n| d\mu < \infty$. Montrer que la série $\sum_n f_n(x)$ converge presque-partout vers une fonction $f$ de $L(X,\mathcal A,\mu)$. 
+}}\\ \\
+
+Solution: Comme $\int \sum_n |f_n(x)| d\mu(x) = \sum_n \int |f_n(x)| d\mu(x)<\infty$, la fonction $x\to \sum_n |f_n(x)|$ est finie presque-partout, donc la fonction $x\to \sum_n f_n(x)$ est définie presque-partout.\newline
+Posons $g_n:x\mapsto \sum_{k=1}^n f_k(x)$. Les $g_n$ convergent presque-partout vers $\limsup g_n$ qui est mesurable.\newline
+Pour tout $n$, $|g_n|\leq \sum_{k=1}^\infty |f_k(x)|$, avec $\int \sum_{k=1}^\infty |f_k(x)| d\mu(x) <\infty$.
+Le théorème de convergence dominée donne $\limsup g_n \in L(X,\mathcal A,\mu)$ et $$\int g_n d\mu = \sum_{k=1}^n \int f_k d\mu \to \int \limsup g_n d\mu$$\underline{Note}: Presque-partout on a $\limsup g_n (x) = \sum_{n=1}^\infty f_n(x)$.
+
+\subsection{} \fbox{
+\parbox{0.9\textwidth}{
+Soit $(f_n)$ une suite de $L(X,\mathcal A,\mu)$ qui converge simplement vers une fonction $f$. Montrer que si $\lim_n \int |f-f_n| d\mu = 0$, alors $\int |f_n|d\mu \to \int |f| d\mu$.
+}}\\ \\
+
+Solution: L'inégalité $|f|\leq |f-f_n| + |f_n|$ implique que $f\in L(X,\mathcal A,\mu)$. \newline
+Par ailleurs $\begin{aligned}[t]
+\left| \int |f| d\mu - \int |f_n| d\mu \right| &= \left|\int |f|-|f_n| d\mu \right| \quad \text{car $f$ et $f_n$ intégrables}\\
+&\leq \int \left||f|-|f_n|\right| d\mu \\
+&\leq \int |f-f_n| d\mu 
+\end{aligned}$
+
+\subsection{} \fbox{
+\parbox{0.9\textwidth}{
+\textbf{Lien entre intégrale de Lebesgue et intégrale de Riemann}\newline
+(1) On considère $([a,b],\mathcal B([a,b]))$ muni de sa mesure de Lebesgue $\lambda$ et une fonction $f:[a,b]\to \mathbb R$ continue.\newline
+Montrer que $f\in L([a,b],\mathcal B([a,b]),\lambda)$ et $\int f d\lambda = \int_a^b f(x)dx$.\newline
+(2) On considère $([0,\infty),\mathcal B([0,\infty)))$ muni de sa mesure de Lebesgue $\lambda$ et une fonction $f:[0,\infty)\to \mathbb R$ continue et positive. Montrer que $\int f d\lambda  = \int_0^\infty f(x) dx$.
+}}\\ \\
+
+Solution: (1) Soit $\phi$ positive en escalier et $a=a_0<\ldots<a_n =b$ une subdivision adaptée de sorte que $\phi = \sum_{i=0}^{n-1} \phi(a_i)\chi_{[a_i,a_{i+1})}$. Alors $$\int \phi d\lambda = \sum_{i=0}^{n-1} \phi(a_i) (a_{i+1}-a_i) = \int_a^b \phi(x)dx$$
+Si $\phi$ est en escalier et de signe quelconque, on écrit $\phi = \phi^+ -\phi ^-$ avec $\phi^+,\phi^-$ positives et en escalier. Les intégrales de ces fonctions sont clairement finies, donc $\phi \in L([a,b],\mathcal B([a,b]),\lambda)$ et $$\int \phi d\lambda = \int \phi^+ d\lambda - \int \phi^- d\lambda =\int_a^b \phi^+(x) dx - \int_a^b \phi^-(x) dx = \int_a^b \phi(x) dx $$
+Considérons $f:[a,b]\to \mathbb R$ continue. $f$ est mesurable et limite uniforme d'une suite de fonctions en escalier $\phi_n$. Comme $\lambda([a,b])<\infty$, $$\int f d\lambda = \lim_n \int \phi_n d\lambda = \lim_n \int_a^b \phi_n(x) dx  =\int_a^b f(x) dx$$
+\newline
+(2)
+
 
 \end{document}
