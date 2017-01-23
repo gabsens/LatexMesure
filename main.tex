@@ -686,6 +686,28 @@ $$\begin{aligned}\int_{E^c}f d\mu \leq \liminf\left(\int_{E^c} f_n d\mu \right)&
 D'où $$\limsup \left( \int_E f_n d\mu\right)\leq \int_E f d\mu$$
 Conclusion: $$\limsup \left( \int_E f_n d\mu\right)= \liminf\left( \int_E f_n d\mu\right)= \int_E f d\mu$$
 
+\newpage 
+\subsection{} \fbox{
+\parbox{0.9\textwidth}{
+Soit $D$ une partie dénombrable de $\mathbb R$, $\nu$ la mesure de comptage sur $D$ et $f:(\mathbb R, \mathcal B(\mathbb R))\to (\mathbb R, \mathcal B(\mathbb R))$ positive. Montrer que $\int f d\nu = \sum_{t\in D} f(t)$
+}}\\ \\
+
+Solution: Pour $A\in \mathcal B(\mathbb R)$ et $f=1_A$, on a $\int f d\nu = \nu(A) = \sum_{t\in D} 1_A(t)$. \newline
+Pour $f=\sum_{i=1}^p a_i \chi_{A_i}$ simple positive, on a par linéarité $$\begin{aligned}
+\int f d\nu &= \sum_{i=1}^p a_i \int 1_{\chi_i} d\nu \\
+&= \sum_{i=1}^p a_i \sum_{t\in D} 1_{\chi_i}(t)\\
+&= \sum_{t\in D}\sum_{i=1}^p a_i 1_{\chi_i}(t) \\
+&= \sum_{t\in D} f(t)
+\end{aligned}$$
+Soit $f$ mesurable positive. On dispose de $\varphi_n$ une suite de fonction étagées positives qui converge en croissant vers $f$. Alors $$\begin{aligned}
+\int f d\nu &= \lim_n \int \varphi_n d\nu\\
+&= \lim_n \sum_{k=1}^\infty \varphi_n(t_k) \quad \text{où } D=\{t_i, i\neq 1\}
+\end{aligned}$$
+Il reste à montrer que $\displaystyle \lim_n \sum_{k=1}^\infty \varphi_n(t_k) = \sum_{k=1}^\infty f(t_k)$.\newline 
+\fbox{$\leq$} Soit $N\geq 1$ et $n\geq 1$, $\displaystyle \sum_{k=1}^N \varphi_{n}(t_k)\leq \sum_{k=1}^N f(t_k) \leq \sum_{k=1}^{\infty} f(t_k) $. Ceci étant vrai pour tout $N$, on a $\displaystyle \sum_{k=1}^\infty \varphi_{n}(t_k)\leq \sum_{k=1}^{\infty} f(t_k) $. Ceci étant vrai pour tout $n$, on a le résultat.\newline
+\fbox{$\geq $} Soit $M\geq 1$ et $N\geq 1$. On a $\displaystyle \sum_{k=1}^M \varphi_N(t_k)\leq \sum_{k=1}^\infty \varphi_N(t_k) \leq \lim_n \sum_{k=1}^\infty \varphi_n(t_k)$.\newline
+Avec $N\to \infty$, $\displaystyle \sum_{k=1}^M f(t_k) \leq \lim_n \sum_{k=1}^\infty \varphi_n(t_k)$. Avec $M\to \infty$, $\displaystyle \sum_{k=1}^\infty f(t_k) \leq \lim_n \sum_{k=1}^\infty \varphi_n(t_k)$.
+
 \newpage
 
 \section{Intégration des fonctions intégrables}

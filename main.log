@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.9.24)  4 DEC 2016 11:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.9.24)  23 JAN 2017 21:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1197,47 +1197,68 @@ Underfull \hbox (badness 10000) in paragraph at lines 680--683
  []
 
 [30]
-Underfull \hbox (badness 10000) in paragraph at lines 696--697
+Underfull \hbox (badness 10000) in paragraph at lines 693--694
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 696--697
+Underfull \hbox (badness 10000) in paragraph at lines 693--694
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 705--706
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 705--706
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 713--714
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 713--714
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 726--727
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 726--727
-
+Overfull \hbox (12.5746pt too wide) in paragraph at lines 705--710
+\T1/cmr/m/n/10 Avec $\OML/cmm/m/it/10 N \OMS/cmsy/m/n/10 ! 1$\T1/cmr/m/n/10 , $
+[] \OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 t[]\OT1/cmr/m/n/10 ) \OM
+S/cmsy/m/n/10 ^^T [] [] \OML/cmm/m/it/10 '[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 t
+[]\OT1/cmr/m/n/10 )$\T1/cmr/m/n/10 . Avec $\OML/cmm/m/it/10 M \OMS/cmsy/m/n/10 
+! 1$\T1/cmr/m/n/10 , $[] \OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 t[
+]\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^T [] [] \OML/cmm/m/it/10 '[]\OT1/cmr/m/n/
+10 (\OML/cmm/m/it/10 t[]\OT1/cmr/m/n/10 )$\T1/cmr/m/n/10 . 
  []
 
 [31]
-Overfull \hbox (23.32635pt too wide) in paragraph at lines 728--734
+Underfull \hbox (badness 10000) in paragraph at lines 718--719
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 718--719
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 727--728
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 727--728
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 735--736
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 735--736
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 748--749
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 748--749
+
+ []
+
+[32]
+Overfull \hbox (23.32635pt too wide) in paragraph at lines 750--756
 []\T1/cmr/m/n/10 Solution : Dans le cadre des fonc-tions me-su-rables po-si-tiv
 es, $[] \OMS/cmsy/m/n/10 j\OML/cmm/m/it/10 f\OMS/cmsy/m/n/10 j\OML/cmm/m/it/10 
 d^^V \OT1/cmr/m/n/10 = [][] \OMS/cmsy/m/n/10 j\OML/cmm/m/it/10 f\OT1/cmr/m/n/10
@@ -1245,46 +1266,46 @@ d^^V \OT1/cmr/m/n/10 = [][] \OMS/cmsy/m/n/10 j\OML/cmm/m/it/10 f\OT1/cmr/m/n/10
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 738--739
+Underfull \hbox (badness 10000) in paragraph at lines 760--761
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 738--739
+Underfull \hbox (badness 10000) in paragraph at lines 760--761
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 747--748
+Underfull \hbox (badness 10000) in paragraph at lines 769--770
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 747--748
+Underfull \hbox (badness 10000) in paragraph at lines 769--770
 
  []
 
-[32]
-Underfull \hbox (badness 10000) in paragraph at lines 757--758
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 757--758
+[33]
+Underfull \hbox (badness 10000) in paragraph at lines 779--780
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 772--773
+Underfull \hbox (badness 10000) in paragraph at lines 779--780
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 772--773
+Underfull \hbox (badness 10000) in paragraph at lines 794--795
 
  []
 
-[33] [34] (./main.aux) ) 
+
+Underfull \hbox (badness 10000) in paragraph at lines 794--795
+
+ []
+
+[34] [35] (./main.aux) ) 
 Here is how much of TeX's memory you used:
  3312 strings out of 493014
  41066 string characters out of 6133351
@@ -1314,10 +1335,10 @@ mbols/msbm7.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/cm-super
 fbx1200.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfr
 m0700.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfrm1
 000.pfb>
-Output written on main.pdf (34 pages, 318712 bytes).
+Output written on main.pdf (35 pages, 322234 bytes).
 PDF statistics:
- 191 PDF objects out of 1000 (max. 8388607)
- 134 compressed objects within 2 object streams
+ 194 PDF objects out of 1000 (max. 8388607)
+ 136 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
